@@ -62,7 +62,7 @@ audio,
 canvas,
 img,
 video {
-    vertical-align: middle;
+    vertical-align: top;
 }
 
 /*
@@ -102,13 +102,18 @@ body {
     font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
     color: #fff;
     font-size: 13px;
-    background: #000000 url(img/loading.gif) center center no-repeat;
+    /*background: #001c28 url(img/loading.gif) center center no-repeat;*/
+    background: #001c28;
     height: 100%;
 }
 
 .bull {
     padding: 0px 5px;
     color: #555;
+}
+
+h1{
+    line-height: 1.1;
 }
 
 a {

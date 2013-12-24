@@ -1,3 +1,32 @@
+<?php
+
+// making json file from csv
+$json_data = "[";
+
+if (($handle = fopen("data/test.csv", "r")) !== FALSE) {
+    while (($data = fgetcsv($handle, ",")) !== FALSE) {
+        $tmp_data = "";
+        $flag = 0;
+        for ($c=0; $c < count($data); $c++) { 
+        	
+        	$data[2] = $data[2]/40; // change magnitude
+
+            if (($data[$c] == "") OR (count($data) <>3) ) $flag = 1;
+            $tmp_data .= round($data[$c], 3).",";           
+        }
+        if ($flag == 0) $json_data .= $tmp_data;
+    }
+    fclose($handle);
+
+    $json_data = substr($json_data, 0, -1)."]";
+    echo $json_data;
+	
+	$json_file = fopen("data/test.json", "w");
+    fwrite ( $json_file , $json_data);
+    fclose($json_file);
+}
+?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -73,7 +102,7 @@
         <footer>
             <div class="container">
                 <div class="right-col">
-                    Разработано: <a href="mmc.nsu.ru">ЦПП НГУ</a> | Данные: <a href=""></a> | движок: <a href="http://www.chromeexperiments.com/globe">WebGL Globe</a>
+                    Разработано: <a href="mmc.nsu.ru">ЦПП НГУ</a> | Данные: <a href=""></a> | движок: <!-- <a href="http://www.chromeexperiments.com/globe">WebGL Globe</a> -->
                 </div>
             </div>
         </footer>
@@ -88,42 +117,48 @@
         <script type="text/javascript" src="js/globe/third-party/Detector.js"></script>
         <script type="text/javascript" src="js/globe/third-party/three.min.js"></script>
         <script type="text/javascript" src="js/globe/globe.js"></script>
+        
+
         <script type="text/javascript">
 
-        var globe = DAT.Globe(document.getElementById('globe-container'), function(label) {
-            return new THREE.Color([
-            0xd9d9d9, 0xb6b4b5, 0x9966cc, 0x15adff, 0x3e66a3,
-            0x216288, 0xff7e7e, 0xff1f13, 0xc0120b, 0x5a1301, 0xffcc02,
-            0xedb113, 0x9fce66, 0x0c9a39,
-            0xfe9872, 0x7f3f98, 0xf26522, 0x2bb673, 0xd7df23,
-            0xe6b23a, 0x7ed3f7][label]);
-        });
+        	var container = document.getElementById('wraper');
 
-        xhr = new XMLHttpRequest();
-        xhr.open('GET', 'data/search.json', true);
-        xhr.onreadystatechange = function(e) {
-            if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
-                    var data = JSON.parse(xhr.responseText);
-                    window.data = data;
-                    globe.addData(data, {format: 'legend'});
-                    globe.createPoints();
-                    globe.animate();
-                    document.body.style.backgroundImage = 'none'; // remove loading
-                }
-            }
-        };
-        xhr.send(null);
-        </script>
+		// Make the globe
+			var globe = new DAT.Globe( container );
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-/*            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');*/
-        </script>
+		// We're going to ask a file for the JSON data.
+			xhr = new XMLHttpRequest();
+
+		// Where do we get the data?
+			xhr.open( 'GET', 'data/test.json', true );
+
+		// What do we do when we have it?
+			xhr.onreadystatechange = function() {
+
+  		// If we've received the data
+  				if ( xhr.readyState === 4 && xhr.status === 200 ) {
+
+      	// Parse the JSON
+     				var data = JSON.parse( xhr.responseText );
+        
+        	
+      	// Tell the globe about your JSON data
+      				globe.addData(data, {format: 'magnitude'});
+	    // Create the geometry
+					globe.createPoints();
+
+      	// Begin animation
+      				globe.animate();
+
+      			}
+
+  			};
+
+		// Begin request
+		xhr.send( null );
+    </script>
+
+        <!-- Google Analytics HERE !!! -->
+
     </body>
 </html>
