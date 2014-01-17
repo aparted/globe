@@ -18,6 +18,12 @@ textarea {
     color: #222;
 }
 
+
+@font-face {
+    font-family: eurofurence; 
+    /*src: url(font/eurofurence.ttf); */
+}
+
 html {
     font-size: 1em;
     line-height: 1.4;
@@ -99,9 +105,9 @@ textarea {
    ========================================================================== */
 
 body {
-    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-family: 'eurofurence',Helvetica,Arial,sans-serif;
     color: #f3f3f3;
-    font-size: 13px;
+    font-size: 14px;
     /*background: #001c28 url(img/loading.gif) center center no-repeat;*/
     background: #00233A;
     height: 100%;
