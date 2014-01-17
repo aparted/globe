@@ -78,7 +78,7 @@ DAT.Globe = function(container, colorFn) {
 
   var mouse = { x: 0, y: 0 }, mouseOnDown = { x: 0, y: 0 };
   var rotation = { x: 0, y: 0 },
-      target = { x: Math.PI*3/2, y: Math.PI / 6.0 },
+      target = { x: Math.PI*1.7, y: Math.PI / 5.0 },
       targetOnDown = { x: 0, y: 0 };
 
   var distance = 100000, distanceTarget = 100000;
@@ -95,7 +95,7 @@ DAT.Globe = function(container, colorFn) {
     h = container.offsetHeight || window.innerHeight;
 
 
-    camera = new THREE.PerspectiveCamera(40, w / h, 1, 10000);
+    camera = new THREE.PerspectiveCamera(26, w / h, 1, 10000);
     camera.position.z = distance;
 
     scene = new THREE.Scene();
@@ -155,7 +155,7 @@ DAT.Globe = function(container, colorFn) {
 
     document.addEventListener('keydown', onDocumentKeyDown, false);
 
-    window.addEventListener('resize', onWindowResize, false);
+    //window.addEventListener('resize', onWindowResize, false);
 
     container.addEventListener('mouseover', function() {
       overRenderer = true;
@@ -172,7 +172,7 @@ DAT.Globe = function(container, colorFn) {
     opts.animated = opts.animated || false;
     this.is_animated = opts.animated;
     opts.format = opts.format || 'magnitude'; // other option is 'legend'
-    console.log(opts.format);
+    //console.log(opts.format);
     if (opts.format === 'magnitude') {
       step = 3;
       colorFnWrapper = function(data, i) { return colorFn(data[i+2]); }
@@ -353,8 +353,8 @@ DAT.Globe = function(container, colorFn) {
   function render() {
     zoom(curZoomSpeed);
 
-    rotation.x += (target.x - rotation.x) * 0.1;
-    rotation.y += (target.y - rotation.y) * 0.1;
+    rotation.x += (target.x - rotation.x) * 0.2;
+    rotation.y += (target.y - rotation.y) * 0.2;
     distance += (distanceTarget - distance) * 0.3;
 
     camera.position.x = distance * Math.sin(rotation.x) * Math.cos(rotation.y);

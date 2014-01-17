@@ -1,32 +1,38 @@
 <?php
-
 // making json file from csv
-$json_data = "[";
+//$json_data = "[";
 
-if (($handle = fopen("data/test.csv", "r")) !== FALSE) {
+/*if (($handle = fopen("data/rank.csv", "r")) !== FALSE) {
     while (($data = fgetcsv($handle, ",")) !== FALSE) {
         $tmp_data = "";
-        $flag = 0;
-        for ($c=0; $c < count($data); $c++) { 
-        	
-        	$data[2] = $data[2]/40; // change magnitude
+        $flag = 0;*/
+
+//        $data[2] = (log(5)/(log($data[2]+4)));
+//$data[2] = (1/log($data[2]+4)/(1/log(5)-1/log(20105))-(1/log(20105)/(1/log(5)-1/log(20105))))*0.99+0.01;
+//        $data[2] = (1/(1+($data[2]+1)/20101));
+//          $data[2] = pow(2, 20101)/(pow(2, 20101) + pow(2, $data[2]));
+//pow(1000000000000000000000000000000000, ((20101-$data[2])/20101)-1)); // change magnitude
+        //print($data[2].'-------');
+
+/*        for ($c=0; $c < count($data); $c++) {        	
 
             if (($data[$c] == "") OR (count($data) <>3) ) $flag = 1;
             $tmp_data .= round($data[$c], 3).",";           
         }
-        if ($flag == 0) $json_data .= $tmp_data;
+*/
+//print_r($tmp_data);
+/*        if ($flag == 0) $json_data .= $tmp_data;
     }
     fclose($handle);
 
     $json_data = substr($json_data, 0, -1)."]";
-    echo $json_data;
+    //echo $json_data;
 	
-	$json_file = fopen("data/test.json", "w");
+	$json_file = fopen("data/test.json", "w+");
     fwrite ( $json_file , $json_data);
     fclose($json_file);
-}
+}*/
 ?>
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -53,15 +59,20 @@ if (($handle = fopen("data/test.csv", "r")) !== FALSE) {
 
         <div id="wraper">
 
-        <header>
-            <div class="container">
+            
+            
+
+        
+
+<!--             <header>
+                <div class="container"> -->
 <!--                 <h1 id="title">
                     <a href="/">
                         Информатизация
                     </a>
                 </h1> -->
 
-                    <div class="right-col">      
+<!--                     <div class="right-col">      
                         <ul id="nav">
                             <li class="nav-item">
                                 <a href="/about/">Семинар</a>
@@ -82,27 +93,75 @@ if (($handle = fopen("data/test.csv", "r")) !== FALSE) {
                     </div>
 
                 </div>
-            </header>
+            </header> -->
+
+            
 
             <div class="container">
                 <aside class="left-col">
+                    <div id="rankName">
+                        
+                            <!--<a href="#" title="Рейтинг отображает глобальные усилия для создания научно-исследовательских репозиториев, что прямо отражается в этом показателе. Показатель принимает во внимание количество файлов (PDF, DOC, DOCX, PPT), опубликованных на специализированных веб-сайтах в соответствии с академической поисковой системой Google Scholar. Цель данного показателя состоит в том, чтобы рассмотреть последние публикации, опубликованные в период между 2008 и 2012 годами (новый период).">
+                            Openness rank*</a>--><i>Рейтинг вузов Webometrics (рекомендуется просмотр в браузере <a href="http://www.google.com/chrome">Google Chrome)</a></i>
+                    </div>
                     <div id="globe-container">
-                        <!--<img width="560px" src="img/globe.jpg" />-->
+                        <!--<div id="earth"> 
+                        </div>-->
+                        <img id="globe-image" width="600px" src="img/globe.png" />
+                    </div>
+                    <div id="clarification">
+
                     </div>
                 </aside>
                 <article class="right-col">
+<!--                     <ul id="nav">
+                        <li class="nav-item">
+                            <a href="#about">Семинар</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="#mobile" class="">Архив</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="#webgl" class="">Анонс</a> 
+                        </li>    
+                        
+                        <li class="nav-item">
+                            <a href="#submit">Трансляция</a>
+                        </li>                                           
+                    
+                        <li class="nav-item">
+                            <a href="#submit">Заявка</a>
+                        </li>                        
+                    </ul> -->
+
                     <h1>Общеуниверситетский научно-методический семинар по информатизации учебного процесса и электронному обучению</h1>
-                    <p>Руководитель: М.М. Лаврентьев, д.ф-м.н., проректор по информатизации НГУ </p>
-                    <p>Секретарь: В.В. Казаков, к.т.н., директор ЦПП НГУ, vkazakov@phys.nsu.ru, 363-40-67, +7 923 241 32 55</p>
+                    <h3>Руководитель: М.М. Лаврентьев, д.ф-м.н., проректор по информатизации НГУ </h3>
+                    <h3>Секретарь: В.В. Казаков, к.т.н., директор ЦПП НГУ, <a href="mailto:vkazakov@phys.nsu.ru">vkazakov@phys.nsu.ru</a>, 363-40-67 <!--, +7 923 241 32 55--></h3>
+                    <hr>
+                    <div id="announcemen">
+                        <!--<h1><center>Внимание!</center></h1>-->
+                        <h3>20 января в 17:45 в аудитории 302 главного корпуса НГУ состоится семинар.<br><br>
+                        Тема семинара:  Построение  социально-сетевых сервисов как многоагентных систем: Об одном перспективном направлении междисциплинарных исследований.<br>
+                        Докладчик: В.Г. Казаков, к.ф.-м.н., доцент НГУЭУ.</h3>
+                        <h4>Предметом рассмотрения являются современные социально-сетевые сервисы и способы их построения.
+                        Рассматривается ряд существенных проблем и ограничений современных социально-сетевых сервисов, показывается их зависимость от используемых программно-архитектурных решений.
+                        Предлагается проведение междисциплинарных поисковых исследований в области выработки требований к социально-сетевым сервисам и создания архитектур и технологий реализации их программной компоненты на альтернативных подходах.
+                        Формулируется гипотеза о возможности построения эффективных социально-сетевых сервисов на основе многоагентных технологий, обсуждаются основные параметры возможного решения.
+                        Приводятся основные направления предлагаемых поисковых исследований.</h4>
+                    </div>
                 </article>
             </div>
         </div>
+
+        
 
         <div class="push"></div>
         <footer>
             <div class="container">
                 <div class="right-col">
-                    Разработано: <a href="mmc.nsu.ru">ЦПП НГУ</a> | Данные: <a href=""></a> | движок: <!-- <a href="http://www.chromeexperiments.com/globe">WebGL Globe</a> -->
+                    Разработано: <a href="http://www.mmedia.nsu.ru">ЦПП НГУ</a> | Данные: <a href="http://www.webometrics.info/en/world">Webometrics</a> <!--| движок: <a href="http://www.chromeexperiments.com/globe"><ins>WebGL Globe</ins></a>-->
                 </div>
             </div>
         </footer>
@@ -121,44 +180,74 @@ if (($handle = fopen("data/test.csv", "r")) !== FALSE) {
 
         <script type="text/javascript">
 
-        	var container = document.getElementById('wraper');
+            if(!Detector.webgl){
+                //alert(1);
+                //Detector.addGetWebGLMessage();
+            }
 
-		// Make the globe
-			var globe = new DAT.Globe( container );
+            else
+            {
 
-		// We're going to ask a file for the JSON data.
-			xhr = new XMLHttpRequest();
+                var container = document.getElementById('globe-container');
 
-		// Where do we get the data?
-			xhr.open( 'GET', 'data/test.json', true );
+                // We're going to ask a file for the JSON data.
+                xhr = new XMLHttpRequest();
 
-		// What do we do when we have it?
-			xhr.onreadystatechange = function() {
+                // Where do we get the data?
+			    xhr.open( 'GET', 'data/test.json', true );
 
-  		// If we've received the data
-  				if ( xhr.readyState === 4 && xhr.status === 200 ) {
+                // What do we do when we have it?
+                xhr.onreadystatechange = function() {
 
-      	// Parse the JSON
-     				var data = JSON.parse( xhr.responseText );
-        
-        	
-      	// Tell the globe about your JSON data
-      				globe.addData(data, {format: 'magnitude'});
-	    // Create the geometry
-					globe.createPoints();
+                    // If we've received the data
+                    if ( xhr.readyState === 4 && xhr.status === 200 ){
+                
+                        // Parse the JSON
+                        var data = JSON.parse( xhr.responseText );
 
-      	// Begin animation
-      				globe.animate();
+                        // Remove globe image 
+                        var glimage = document.getElementById("globe-image");
 
-      			}
+                        container.removeChild(glimage);
 
-  			};
+                        // Make the globe
+                        var globe = new DAT.Globe( container );        
+                
+                        // Tell the globe about your JSON data
+                        globe.addData(data, {format: 'magnitude'});
+	           
+                        // Create the geometry
+                        globe.createPoints();
+                
+                        // Begin animation
+                        globe.animate();
 
-		// Begin request
-		xhr.send( null );
+      		        }
+
+                };
+                
+                // Begin request
+                xhr.send( null );
+            }
+        </script>
+
+<?php
+if ($_SERVER["HTTP_HOST"] == "seminar.mmc.nsu.ru")
+{
+echo "
+    <script type='text/javascript'>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-47212284-1', 'nsu.ru');
+        ga('send', 'pageview');
+
     </script>
-
-        <!-- Google Analytics HERE !!! -->
+";
+}
+?>
 
     </body>
 </html>
