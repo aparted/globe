@@ -161,7 +161,7 @@
         <footer>
             <div class="container">
                 <div class="right-col">
-                    Разработано: <a href="http://www.mmedia.nsu.ru">ЦПП НГУ</a> | Данные: <a href="http://www.webometrics.info/en/world">Webometrics</a> <!--| движок: <a href="http://www.chromeexperiments.com/globe"><ins>WebGL Globe</ins></a>-->
+                    Разработано: <a href="http://www.mmedia.nsu.ru">ЦПП НГУ</a> | Данные: <a href="http://www.webometrics.info/en/world">Webometrics</a> | движок: <a href="http://www.chromeexperiments.com/globe"><ins>WebGL Globe</ins></a>
                 </div>
             </div>
         </footer>
