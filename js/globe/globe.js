@@ -85,6 +85,10 @@ DAT.Globe = function(container, colorFn) {
   var padding = 40;
   var PI_HALF = Math.PI / 2;
 
+  var ROTATIONSPEED = 0.003;
+  var k = ROTATIONSPEED;
+  var f = false;
+
   function init() {
 
     container.style.color = '#fff';
@@ -273,6 +277,9 @@ DAT.Globe = function(container, colorFn) {
   function onMouseDown(event) {
     event.preventDefault();
 
+    k = 0;
+    f = true;
+
     container.addEventListener('mousemove', onMouseMove, false);
     container.addEventListener('mouseup', onMouseUp, false);
     container.addEventListener('mouseout', onMouseOut, false);
@@ -300,6 +307,10 @@ DAT.Globe = function(container, colorFn) {
   }
 
   function onMouseUp(event) {
+
+    k = ROTATIONSPEED;
+    f = false;
+
     container.removeEventListener('mousemove', onMouseMove, false);
     container.removeEventListener('mouseup', onMouseUp, false);
     container.removeEventListener('mouseout', onMouseOut, false);
@@ -307,16 +318,20 @@ DAT.Globe = function(container, colorFn) {
   }
 
   function onMouseOut(event) {
+
+    k = ROTATIONSPEED;
+    f = false;
+
     container.removeEventListener('mousemove', onMouseMove, false);
     container.removeEventListener('mouseup', onMouseUp, false);
     container.removeEventListener('mouseout', onMouseOut, false);
   }
 
   function onMouseWheel(event) {
-    event.preventDefault();
+    /*event.preventDefault();
     if (overRenderer) {
       zoom(event.wheelDeltaY * 0.3);
-    }
+    }*/
     return false;
   }
 
@@ -348,13 +363,27 @@ DAT.Globe = function(container, colorFn) {
   function animate() {
     requestAnimationFrame(animate);
     render();
+
   }
+
+  
 
   function render() {
     zoom(curZoomSpeed);
 
+    target.x -= k;
+
     rotation.x += (target.x - rotation.x) * 0.2;
-    rotation.y += (target.y - rotation.y) * 0.2;
+
+   
+    
+    if (f == true){
+      rotation.y += (target.y - rotation.y) * 0.2;}
+    if (f == false){
+      target.y = Math.PI / 5.0;
+      rotation.y += (target.y - rotation.y) * 0.02;
+    };
+
     distance += (distanceTarget - distance) * 0.3;
 
     camera.position.x = distance * Math.sin(rotation.x) * Math.cos(rotation.y);
@@ -364,6 +393,7 @@ DAT.Globe = function(container, colorFn) {
     camera.lookAt(mesh.position);
 
     renderer.render(scene, camera);
+
   }
 
   init();

@@ -178,6 +178,14 @@ header #title {
     padding-left: 0;
 }
 
+.btn-slide hr{
+    cursor: pointer;
+}
+
+#panel{
+    display: 
+}
+
 #wraper {
     min-height: 100% !important;;
     height: auto !important;
@@ -199,7 +207,6 @@ header #title {
 
 #rankName{
     text-align: justify;
-    margin-top: 45px;
     margin-bottom: 10px;
 
     /*text-decoration: underline;*/
@@ -208,6 +215,11 @@ header #title {
 .container{
     margin: 0 auto;
     width: 1240px;
+}
+
+
+.main-container{
+    padding-top: 50px;
 }
 
 .right-col {

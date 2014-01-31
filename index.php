@@ -99,18 +99,18 @@
 
             <div class="container">
                 <aside class="left-col">
-                    <div id="rankName">
-                        
-                            <!--<a href="#" title="Рейтинг отображает глобальные усилия для создания научно-исследовательских репозиториев, что прямо отражается в этом показателе. Показатель принимает во внимание количество файлов (PDF, DOC, DOCX, PPT), опубликованных на специализированных веб-сайтах в соответствии с академической поисковой системой Google Scholar. Цель данного показателя состоит в том, чтобы рассмотреть последние публикации, опубликованные в период между 2008 и 2012 годами (новый период).">
-                            Openness rank*</a>--><i>Рейтинг вузов Webometrics (рекомендуется просмотр в браузере <a href="http://www.google.com/chrome">Google Chrome)</a></i>
-                    </div>
-                    <div id="globe-container">
-                        <!--<div id="earth"> 
-                        </div>-->
-                        <img id="globe-image" width="600px" src="img/globe.png" />
-                    </div>
-                    <div id="clarification">
 
+                    <div class="main-container">                        
+ 
+                        <div id="rankName">                        
+                            <i>Рейтинг вузов Webometrics (рекомендуется просмотр в браузерах<br><a href="http://www.google.com/chrome">Google Chrome</a>, <a href="http://www.mozilla.org/ru/firefox/new/">Mozilla Firefox</a>, <a href="http://www.opera.com/ru">Opera</a>)</i>
+                        </div>
+
+                        <div id="globe-container">
+                        </div>
+
+                        <div id="video-container" >                            
+                        </div>
                     </div>
                 </aside>
                 <article class="right-col">
@@ -142,14 +142,18 @@
                     <hr>
                     <div id="announcemen">
                         <!--<h1><center>Внимание!</center></h1>-->
-                        <h3>20 января в 17:45 в аудитории 302 главного корпуса НГУ состоится семинар.<br><br>
+                        <h3>20 января в 17:45 в аудитории 302 главного корпуса НГУ состоялся семинар.<br><br>
                         Тема семинара:  Построение  социально-сетевых сервисов как многоагентных систем: Об одном перспективном направлении междисциплинарных исследований.<br>
-                        Докладчик: В.Г. Казаков, к.ф.-м.н., доцент НГУЭУ.</h3>
-                        <h4>Предметом рассмотрения являются современные социально-сетевые сервисы и способы их построения.
+                        Докладчик: В.Г. Казаков, к.ф.-м.н., доцент НГУЭУ. <a href="#" id="video">смотреть видео</a></h3>
+
+                        <div class="btn-slide" ><hr/></div>   
+
+                            <h4 id="panel">Предметом рассмотрения являются современные социально-сетевые сервисы и способы их построения.
                         Рассматривается ряд существенных проблем и ограничений современных социально-сетевых сервисов, показывается их зависимость от используемых программно-архитектурных решений.
                         Предлагается проведение междисциплинарных поисковых исследований в области выработки требований к социально-сетевым сервисам и создания архитектур и технологий реализации их программной компоненты на альтернативных подходах.
                         Формулируется гипотеза о возможности построения эффективных социально-сетевых сервисов на основе многоагентных технологий, обсуждаются основные параметры возможного решения.
                         Приводятся основные направления предлагаемых поисковых исследований.</h4>
+
                     </div>
                 </article>
             </div>
@@ -167,7 +171,7 @@
         </footer>
 
         <!-- jquery and main.js -->
-        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+        <script src="js/vendor/jquery-1.10.2.min.js"></script>
         <!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>-->
@@ -176,59 +180,155 @@
         <script type="text/javascript" src="js/globe/third-party/Detector.js"></script>
         <script type="text/javascript" src="js/globe/third-party/three.min.js"></script>
         <script type="text/javascript" src="js/globe/globe.js"></script>
+        <script type="text/javascript" src="js/jwplayer/jwplayer.js"></script>
         
 
         <script type="text/javascript">
 
-            if(!Detector.webgl){
-                //alert(1);
-                //Detector.addGetWebGLMessage();
+            function browser(){
+    
+                var ua = navigator.userAgent;
+    
+                if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+                if (ua.search(/Firefox/) > 0) return 'Firefox';
+                if (ua.search(/Opera/) > 0) return 'Opera';
+                if (ua.search(/Chrome/) > 0) return 'Google Chrome';
+                if (ua.search(/Safari/) > 0) return 'Safari';
+                if (ua.search(/Konqueror/) > 0) return 'Konqueror';
+                if (ua.search(/Iceweasel/) > 0) return 'Debian Iceweasel';
+                if (ua.search(/SeaMonkey/) > 0) return 'SeaMonkey';
+    
+                // Браузеров очень много, все вписывать смысле нет, Gecko почти везде встречается
+                if (ua.search(/Gecko/) > 0) return 'Gecko';
+
+                // а может это вообще поисковый робот
+                return 'Search Bot';
             }
 
+            browserName = browser();
+
+            if ((document.all && !window.atob) || browserName == 'Safari') {
+                var globeDiv = document.getElementById("globe-container");
+                globeDiv.innerHTML = "<img id=\"globe-image\" width=\"600px\" src=\"img/globe.png\" />";
+                }
             else
             {
 
-                var container = document.getElementById('globe-container');
+                if(!Detector.webgl){
+                    //alert(1);
+                    //Detector.addGetWebGLMessage();
+                }
 
-                // We're going to ask a file for the JSON data.
-                xhr = new XMLHttpRequest();
+                else
+                {
 
-                // Where do we get the data?
-			    xhr.open( 'GET', 'data/test.json', true );
+                    var container = document.getElementById('globe-container');
 
-                // What do we do when we have it?
-                xhr.onreadystatechange = function() {
+                    // We're going to ask a file for the JSON data.
+                    xhr = new XMLHttpRequest();
 
-                    // If we've received the data
-                    if ( xhr.readyState === 4 && xhr.status === 200 ){
+                    // Where do we get the data?
+    			    xhr.open( 'GET', 'data/rank.json', true );
+
+                    // What do we do when we have it?
+                    xhr.onreadystatechange = function() {
+
+                        // If we've received the data
+                        if ( xhr.readyState === 4 && xhr.status === 200 ){
                 
-                        // Parse the JSON
-                        var data = JSON.parse( xhr.responseText );
+                            // Parse the JSON
+                            var data = JSON.parse( xhr.responseText );
 
-                        // Remove globe image 
-                        var glimage = document.getElementById("globe-image");
+                            // Remove globe image 
+                            /*var glimage = document.getElementById("globe-image");
 
-                        container.removeChild(glimage);
+                            container.removeChild(glimage);*/
 
-                        // Make the globe
-                        var globe = new DAT.Globe( container );        
+                            // Make the globe
+                            var globe = new DAT.Globe( container );        
                 
-                        // Tell the globe about your JSON data
-                        globe.addData(data, {format: 'magnitude'});
+                            // Tell the globe about your JSON data
+                            globe.addData(data, {format: 'magnitude'});
 	           
-                        // Create the geometry
-                        globe.createPoints();
+                            // Create the geometry
+                            globe.createPoints();
                 
-                        // Begin animation
-                        globe.animate();
+                            // Begin animation
+                            globe.animate();
 
-      		        }
+          		        }
 
-                };
+                    };
                 
-                // Begin request
-                xhr.send( null );
-            }
+                    // Begin request
+                    xhr.send( null );
+                }
+            };
+
+        $(document).ready(function() {
+
+/*            $(".btn-slide").click(function(){
+                //alert(1);
+            $("#panel").slideToggle("fast");
+            //$(this).toggleClass("active");
+            //$("#panel").addClass('tpanel');
+            });*/
+
+            $("#video").click(function(){
+
+                $("#rankName").hide();
+                $("#globe-container").hide();
+
+
+/*if (document.all) {*/
+if (document.all && !window.atob){
+
+    jwplayer("video-container").setup({
+                    primary: "flash",
+                    width: 560,
+                    height: 320,
+                    playlist: [{    
+                        //file: "rtmp://application/mp4:myVideo.mp4",  
+                        //file: "rtmp://application/mp4:myVideo.mp4",
+                        //http://globe/data/video/22_01/seminar_v640.m4v 
+                        sources: [                            
+                            { file: "data/video/22_01/seminar_v640.m4v", label: "640p" },
+                            { file: "data/video/22_01/seminar_v320.m4v", label: "320p" }
+                            //{ file: "data/video/22_01/p1v1920.mp4", label: "1920p HD" }
+                        ],
+                        title: "Построение социально-сетевых сервисов как многоагентных систем"
+                    }]
+                });
+    }
+else 
+{ 
+    $("#video-container").html('<video width="560" controls="controls"><source src="http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v640.mp4" type="video/mp4"  /><source src="http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v640.webm" type="video/webm" /></video>');
+}   
+
+                
+/*                jwplayer("video-container").setup({
+                    primary: "flash",
+                    width: 560,
+                    height: 320,
+                    playlist: [{    
+                        //file: "rtmp://application/mp4:myVideo.mp4",  
+                        //file: "rtmp://application/mp4:myVideo.mp4",
+                        //http://globe/data/video/22_01/seminar_v640.m4v 
+                        sources: [                            
+                            { file: "data/video/22_01/seminar_v640.m4v", label: "640p" },
+                            { file: "data/video/22_01/seminar_v320.m4v", label: "320p" },
+                            //{ file: "data/video/22_01/p1v1920.mp4", label: "1920p HD" }
+                        ],
+                        title: "Построение социально-сетевых сервисов как многоагентных систем"
+                    }]
+                });*/
+
+            //alert(1);
+            
+            //$(this).toggleClass("active");
+            //$("#panel").addClass('tpanel');
+            });
+        });
         </script>
 
 <?php
