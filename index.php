@@ -292,8 +292,8 @@ if ((document.all && !window.atob) || browserName == 'Safari'){
                         //file: "rtmp://application/mp4:myVideo.mp4",
                         //http://globe/data/video/22_01/seminar_v640.m4v 
                         sources: [                            
-                            { file: "data/video/22_01/seminar_v640.m4v", label: "640p" },
-                            { file: "data/video/22_01/seminar_v320.m4v", label: "320p" }
+                            { file: "http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v640.m4v", label: "640p" },
+                            { file: "http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v320.m4v", label: "320p" }
                             //{ file: "data/video/22_01/p1v1920.mp4", label: "1920p HD" }
                         ],
                         title: "Построение социально-сетевых сервисов как многоагентных систем"
@@ -302,7 +302,7 @@ if ((document.all && !window.atob) || browserName == 'Safari'){
     }
 else 
 { 
-    $("#video-container").html('<video width="560" controls="controls"><source src="http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v640.mp4" type="video/mp4"  /><source src="http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v640.webm" type="video/webm" /></video>');
+    $("#video-container").html('<video width="560" controls="controls"><source src="http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v640.m4v" type="video/mp4"  /><source src="http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v640.webm" type="video/webm" /></video>');
 }   
 
                 
