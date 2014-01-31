@@ -103,7 +103,7 @@
                     <div class="main-container">                        
  
                         <div id="rankName">                        
-                            <i>Рейтинг вузов Webometrics (рекомендуется просмотр в браузерах<br><a href="http://www.google.com/chrome">Google Chrome</a>, <a href="http://www.mozilla.org/ru/firefox/new/">Mozilla Firefox</a>, <a href="http://www.opera.com/ru">Opera</a>)</i>
+                            <i>Рейтинг вузов Webometrics (рекомендуется просмотр в браузерах<br><a href="http://www.google.com/chrome">Google Chrome</a>, <a href="http://www.mozilla.org/ru/firefox/new/">Mozilla Firefox</a>, <a href="http://www.opera.com/ru">Opera</a>, <a href="http://windows.microsoft.com/ru-ru/internet-explorer/ie-11-worldwide-languages">Internet Explorer 11</a>)</i>
                         </div>
 
                         <div id="globe-container">
