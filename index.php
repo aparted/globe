@@ -281,7 +281,7 @@
 
 
 /*if (document.all) {*/
-if (document.all && !window.atob){
+if ((document.all && !window.atob) || browserName == 'Safari'){
 
     jwplayer("video-container").setup({
                     primary: "flash",
