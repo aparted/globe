@@ -103,7 +103,8 @@
                     <div class="main-container">                        
  
                         <div id="rankName">                        
-                            <i>Рейтинг вузов Webometrics (рекомендуется просмотр в браузерах<br><a href="http://www.google.com/chrome">Google Chrome</a>, <a href="http://www.mozilla.org/ru/firefox/new/">Mozilla Firefox</a>, <a href="http://www.opera.com/ru">Opera</a>, <a href="http://windows.microsoft.com/ru-ru/internet-explorer/ie-11-worldwide-languages">Internet Explorer 11</a>)</i>
+                            <h2><center>Рейтинг вузов Webometrics</center></h2>
+                            <div id="recommendedBrowsers"></div>
                         </div>
 
                         <div id="globe-container">
@@ -207,9 +208,15 @@
 
             browserName = browser();
 
-            if ((document.all && !window.atob) || browserName == 'Safari') {
+            //alert(browserName);
+
+            if ((document.all && !window.atob) || (browserName == 'Safari') || (browserName == 'Internet Explorer')) {
+
                 var globeDiv = document.getElementById("globe-container");
                 globeDiv.innerHTML = "<img id=\"globe-image\" width=\"600px\" src=\"img/globe.png\" />";
+
+                var recommendedDiv = document.getElementById("recommendedBrowsers");
+                recommendedDiv.innerHTML = "Рекомендуется просмотр в браузерах <a href=\"http://www.google.com/chrome\">Google&nbsp;Chrome&nbsp;9.0+</a>, <a href=\"http://www.mozilla.org/ru/firefox/new/\">Mozilla&nbsp;irefox&nbsp;4.0+</a>, <a href=\"http://www.opera.com/ru\">Opera&nbsp;13.0+</a>, <a href=\"http://windows.microsoft.com/ru-ru/internet-explorer/ie-11-worldwide-languages\">Internet&nbsp;Explorer&nbsp;11.0+</a>.";
                 }
             else
             {
@@ -281,10 +288,12 @@
 
 
 /*if (document.all) {*/
-if ((document.all && !window.atob) || browserName == 'Safari'){
+if ((document.all && !window.atob) || (browserName == 'Safari') || (browserName == 'Internet Explorer')){
+
+    //alert('kokoko');
 
     jwplayer("video-container").setup({
-                    primary: "flash",
+                    //primary: "flash",
                     width: 560,
                     height: 320,
                     playlist: [{    
@@ -302,7 +311,7 @@ if ((document.all && !window.atob) || browserName == 'Safari'){
     }
 else 
 { 
-    $("#video-container").html('<video width="560" controls="controls"><source src="http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v640.m4v" type="video/mp4"  /><source src="http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v640.webm" type="video/webm" /></video>');
+    $("#video-container").html('<video width="560" controls="controls"><source src="http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v640.mp4" type="video/mp4"  /><source src="http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v640.webm" type="video/webm" /></video>');
 }   
 
                 
