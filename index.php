@@ -238,7 +238,7 @@
                         }*/
                             var recommendedDiv = document.getElementById("recommendedBrowsers");
                             recommendedDiv.innerHTML = "Ваш браузер или видеокарта не поддерживает webGL, рекомендуется просмотр в браузерах <a href=\"http://www.google.com/chrome\">Google&nbsp;Chrome&nbsp;9.0+</a>, <a href=\"http://www.mozilla.org/ru/firefox/new/\">Mozilla&nbsp;irefox&nbsp;4.0+</a>, <a href=\"http://www.opera.com/ru\">Opera&nbsp;13.0+</a>, <a href=\"http://windows.microsoft.com/ru-ru/internet-explorer/ie-11-worldwide-languages\">Internet&nbsp;Explorer&nbsp;11.0+</a>.";
-                        
+
                 }
 
                 else
@@ -308,7 +308,7 @@ if ((document.all && !window.atob) || (browserName == 'Safari') || (browserName 
     //alert('kokoko');
 
     jwplayer("video-container").setup({
-                    //primary: "flash",
+                    primary: "flash",
                     width: 560,
                     height: 320,
                     playlist: [{    
