@@ -210,20 +210,35 @@
 
             //alert(browserName);
 
-            if ((document.all && !window.atob) || (browserName == 'Safari') || (browserName == 'Internet Explorer')) {
+            /*if ((document.all && !window.atob) || (browserName == 'Safari') || (browserName == 'Internet Explorer')) {
 
                 var globeDiv = document.getElementById("globe-container");
                 globeDiv.innerHTML = "<img id=\"globe-image\" width=\"600px\" src=\"img/globe.png\" />";
 
                 var recommendedDiv = document.getElementById("recommendedBrowsers");
                 recommendedDiv.innerHTML = "Рекомендуется просмотр в браузерах <a href=\"http://www.google.com/chrome\">Google&nbsp;Chrome&nbsp;9.0+</a>, <a href=\"http://www.mozilla.org/ru/firefox/new/\">Mozilla&nbsp;irefox&nbsp;4.0+</a>, <a href=\"http://www.opera.com/ru\">Opera&nbsp;13.0+</a>, <a href=\"http://windows.microsoft.com/ru-ru/internet-explorer/ie-11-worldwide-languages\">Internet&nbsp;Explorer&nbsp;11.0+</a>.";
-                }
-            else
-            {
+                } else*/
+            //{
 
-                if(!Detector.webgl){
-                    //alert(1);
-                    //Detector.addGetWebGLMessage();
+                if(!Detector.webgl)
+                {
+
+                    var globeDiv = document.getElementById("globe-container");
+                    globeDiv.innerHTML = "<img id=\"globe-image\" width=\"600px\" src=\"img/globe.png\" />";
+
+/*                    if (window.WebGLRenderingContext)
+                        {
+                            var recommendedDiv = document.getElementById("recommendedBrowsers");
+                            recommendedDiv.innerHTML = "Ваша видеокарта не поддерживает webGL";
+                        }
+                    else
+                        {
+                            var recommendedDiv = document.getElementById("recommendedBrowsers");
+                            recommendedDiv.innerHTML = "Ваш браузер или видеокарта не поддерживает webGL, рекомендуется просмотр в браузерах <a href=\"http://www.google.com/chrome\">Google&nbsp;Chrome&nbsp;9.0+</a>, <a href=\"http://www.mozilla.org/ru/firefox/new/\">Mozilla&nbsp;irefox&nbsp;4.0+</a>, <a href=\"http://www.opera.com/ru\">Opera&nbsp;13.0+</a>, <a href=\"http://windows.microsoft.com/ru-ru/internet-explorer/ie-11-worldwide-languages\">Internet&nbsp;Explorer&nbsp;11.0+</a>.";
+                        }*/
+                            var recommendedDiv = document.getElementById("recommendedBrowsers");
+                            recommendedDiv.innerHTML = "Ваш браузер или видеокарта не поддерживает webGL, рекомендуется просмотр в браузерах <a href=\"http://www.google.com/chrome\">Google&nbsp;Chrome&nbsp;9.0+</a>, <a href=\"http://www.mozilla.org/ru/firefox/new/\">Mozilla&nbsp;irefox&nbsp;4.0+</a>, <a href=\"http://www.opera.com/ru\">Opera&nbsp;13.0+</a>, <a href=\"http://windows.microsoft.com/ru-ru/internet-explorer/ie-11-worldwide-languages\">Internet&nbsp;Explorer&nbsp;11.0+</a>.";
+                        
                 }
 
                 else
@@ -269,8 +284,8 @@
                 
                     // Begin request
                     xhr.send( null );
-                }
-            };
+                };
+            //};
 
         $(document).ready(function() {
 
@@ -297,9 +312,6 @@ if ((document.all && !window.atob) || (browserName == 'Safari') || (browserName 
                     width: 560,
                     height: 320,
                     playlist: [{    
-                        //file: "rtmp://application/mp4:myVideo.mp4",  
-                        //file: "rtmp://application/mp4:myVideo.mp4",
-                        //http://globe/data/video/22_01/seminar_v640.m4v 
                         sources: [                            
                             { file: "http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v640.m4v", label: "640p" },
                             { file: "http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v320.m4v", label: "320p" }
