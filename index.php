@@ -1,38 +1,3 @@
-<?php
-// making json file from csv
-//$json_data = "[";
-
-/*if (($handle = fopen("data/rank.csv", "r")) !== FALSE) {
-    while (($data = fgetcsv($handle, ",")) !== FALSE) {
-        $tmp_data = "";
-        $flag = 0;*/
-
-//        $data[2] = (log(5)/(log($data[2]+4)));
-//$data[2] = (1/log($data[2]+4)/(1/log(5)-1/log(20105))-(1/log(20105)/(1/log(5)-1/log(20105))))*0.99+0.01;
-//        $data[2] = (1/(1+($data[2]+1)/20101));
-//          $data[2] = pow(2, 20101)/(pow(2, 20101) + pow(2, $data[2]));
-//pow(1000000000000000000000000000000000, ((20101-$data[2])/20101)-1)); // change magnitude
-        //print($data[2].'-------');
-
-/*        for ($c=0; $c < count($data); $c++) {        	
-
-            if (($data[$c] == "") OR (count($data) <>3) ) $flag = 1;
-            $tmp_data .= round($data[$c], 3).",";           
-        }
-*/
-//print_r($tmp_data);
-/*        if ($flag == 0) $json_data .= $tmp_data;
-    }
-    fclose($handle);
-
-    $json_data = substr($json_data, 0, -1)."]";
-    //echo $json_data;
-	
-	$json_file = fopen("data/test.json", "w+");
-    fwrite ( $json_file , $json_data);
-    fclose($json_file);
-}*/
-?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -51,6 +16,13 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+        <!-- jquery and main.js -->
+        <script src="js/vendor/jquery-1.10.2.min.js"></script>
+        <!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>-->
+
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -58,11 +30,6 @@
         <![endif]-->
 
         <div id="wraper">
-
-            
-            
-
-        
 
 <!--             <header>
                 <div class="container"> -->
@@ -98,11 +65,11 @@
             
 
             <div class="container">
-                <aside class="left-col">
+                <div class="left-col">
 
-                    <div class="main-container">                        
+                    <div class="main-container">
  
-                        <div id="rankName">                        
+                        <div id="rankName">
                             <h2><center>Рейтинг вузов Webometrics</center></h2>
                             <div id="recommendedBrowsers"></div>
                         </div>
@@ -110,11 +77,15 @@
                         <div id="globe-container">
                         </div>
 
-                        <div id="video-container" >                            
+                        <div id="hide-video-container">
+                            <a href="#" id="hide-video">закрыть</a>
+                        </div>
+
+                        <div id="video-container">
                         </div>
                     </div>
-                </aside>
-                <article class="right-col">
+                </div>
+                <div class="right-col">
 <!--                     <ul id="nav">
                         <li class="nav-item">
                             <a href="#about">Семинар</a>
@@ -141,48 +112,86 @@
                     <h3>Руководитель: М.М. Лаврентьев, д.ф-м.н., проректор по информатизации НГУ </h3>
                     <h3>Секретарь: В.В. Казаков, к.т.н., директор ЦПП НГУ, <a href="mailto:vkazakov@phys.nsu.ru">vkazakov@phys.nsu.ru</a>, 363-40-67 <!--, +7 923 241 32 55--></h3>
                     <hr>
-                    <div id="announcemen">
-                        <!--<h1><center>Внимание!</center></h1>-->
-                        <h3>20 января в 17:45 в аудитории 302 главного корпуса НГУ состоялся семинар.<br><br>
-                        Тема семинара:  Построение  социально-сетевых сервисов как многоагентных систем: Об одном перспективном направлении междисциплинарных исследований.<br>
-                        Докладчик: В.Г. Казаков, к.ф.-м.н., доцент НГУЭУ. <a href="#" id="video">смотреть видео</a></h3>
 
-                        <div class="btn-slide" ><hr/></div>   
+                    <!--Slider HTML-->
 
-                            <h4 id="panel">Предметом рассмотрения являются современные социально-сетевые сервисы и способы их построения.
-                        Рассматривается ряд существенных проблем и ограничений современных социально-сетевых сервисов, показывается их зависимость от используемых программно-архитектурных решений.
-                        Предлагается проведение междисциплинарных поисковых исследований в области выработки требований к социально-сетевым сервисам и создания архитектур и технологий реализации их программной компоненты на альтернативных подходах.
-                        Формулируется гипотеза о возможности построения эффективных социально-сетевых сервисов на основе многоагентных технологий, обсуждаются основные параметры возможного решения.
-                        Приводятся основные направления предлагаемых поисковых исследований.</h4>
-
+                    <div id="navigation">
+                        <ul class="navigation-list">
+                            <li><a class="active_blob" href="#" onClick="goto('#announcement2', this); return false">&nbsp;</a></li>
+                            <li><a href="#" onClick="goto('#announcement1', this); return false">&nbsp;</a></li>
+                        </ul>
                     </div>
-                </article>
+
+                    <div id="content_wrapper">
+                        <div id="box_wrapper" style="left: 0px">
+                            <div id="announcement2" class="content_box">
+                                <div class="announcement">
+                                    <!--<h1><center>Внимание!</center></h1>-->
+                                    <h3 class="announcement-theme">10 февраля в 16:00 в аудитории 257 главного корпуса НГУ состоится семинар.<br><br>
+                                    Тема семинара: Обсуждение проекта разработки, внедрения и поддержки технологии смешанного обучения в НГУ в рамках программы повышения конкурентоспособности<br>TOP-100.</h3>
+
+                                    <div class="btn-slide" ><hr/></div>   
+
+                                    <h4 id="panel"> На заседании семинара будет представлен проект технологии смешанного обучения НГУ, подготовленный для программы повышения конкурентоспособности.
+                                    Цель проекта – создание и внедрение в НГУ модели (платформы)  электронного, онлайн и смешанного обучения.
+                                    Реализация проекта призвана устранить разрыв между НГУ и ведущими мировыми университетами в области применения электронных средств обучения.
+                                    Будут рассмотрены направления создания механизмов и нормативного обеспечения смешанного обучения, создания службы технической поддержки и поддержки пользователей,
+                                    внедрения электронных средств обучения и управления учебным процессом, информационной и методической поддержки разработки образовательного контента,
+                                    программы повышения квалификации НПР НГУ по использованию технологии смешанного обучения.</h4>
+                                </div>
+                            </div>
+
+                            <div id="announcement1" class="content_box">
+                                <div class="announcement">
+                                    <!--<h1><center>Внимание!</center></h1>-->
+                                    <h3 class="announcement-theme">20 января в 17:45 в аудитории 302 главного корпуса НГУ состоялся семинар.<br><br>
+                                    Тема семинара:  Построение  социально-сетевых сервисов как многоагентных систем: Об одном перспективном направлении междисциплинарных исследований.<br>
+                                    Докладчик: В.Г. Казаков, к.ф.-м.н., доцент НГУЭУ. <a href="#" id="video">смотреть видео</a></h3>
+
+                                    <div class="btn-slide" ><hr/></div>   
+
+                                    <h4 id="panel">Предметом рассмотрения являются современные социально-сетевые сервисы и способы их построения.
+                                    Рассматривается ряд существенных проблем и ограничений современных социально-сетевых сервисов, показывается их зависимость от используемых программно-архитектурных решений.
+                                    Предлагается проведение междисциплинарных поисковых исследований в области выработки требований к социально-сетевым сервисам и создания архитектур и технологий реализации их программной компоненты на альтернативных подходах.
+                                    Формулируется гипотеза о возможности построения эффективных социально-сетевых сервисов на основе многоагентных технологий, обсуждаются основные параметры возможного решения.
+                                    Приводятся основные направления предлагаемых поисковых исследований.</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         
+        <script type="text/javascript">
+            function goto(id, t){   
+                //animate to the div id.
+                $("#box_wrapper").animate({"left": -($(id).position().left)}, 600);
+                    
+                // remove "active" class from all links inside #nav
+                $('#navigation a').removeClass('active_blob');
+                    
+                // add active class to the current link
+                $(t).addClass('active_blob');    
+            }
+        </script>        
 
         <div class="push"></div>
         <footer>
             <div class="container">
-                <div class="right-col">
+                <div class="footer-text">
                     Разработано: <a href="http://www.mmedia.nsu.ru">ЦПП НГУ</a> | Данные: <a href="http://www.webometrics.info/en/world">Webometrics</a> | движок: <a href="http://www.chromeexperiments.com/globe"><ins>WebGL Globe</ins></a>
                 </div>
             </div>
         </footer>
 
-        <!-- jquery and main.js -->
-        <script src="js/vendor/jquery-1.10.2.min.js"></script>
-        <!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>-->
 
         <!--globe WebGL -->
         <script type="text/javascript" src="js/globe/third-party/Detector.js"></script>
         <script type="text/javascript" src="js/globe/third-party/three.min.js"></script>
         <script type="text/javascript" src="js/globe/globe.js"></script>
         <script type="text/javascript" src="js/jwplayer/jwplayer.js"></script>
-        
 
         <script type="text/javascript">
 
@@ -190,6 +199,7 @@
     
                 var ua = navigator.userAgent;
     
+                if (ua.search(/rv:11.0/) > 0) return 'Internet Explorer 11';
                 if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
                 if (ua.search(/Firefox/) > 0) return 'Firefox';
                 if (ua.search(/Opera/) > 0) return 'Opera';
@@ -208,106 +218,63 @@
 
             browserName = browser();
 
-            //alert(browserName);
-
-            /*if ((document.all && !window.atob) || (browserName == 'Safari') || (browserName == 'Internet Explorer')) {
+            if(!Detector.webgl)
+            {
 
                 var globeDiv = document.getElementById("globe-container");
                 globeDiv.innerHTML = "<img id=\"globe-image\" width=\"600px\" src=\"img/globe.png\" />";
 
                 var recommendedDiv = document.getElementById("recommendedBrowsers");
-                recommendedDiv.innerHTML = "Рекомендуется просмотр в браузерах <a href=\"http://www.google.com/chrome\">Google&nbsp;Chrome&nbsp;9.0+</a>, <a href=\"http://www.mozilla.org/ru/firefox/new/\">Mozilla&nbsp;irefox&nbsp;4.0+</a>, <a href=\"http://www.opera.com/ru\">Opera&nbsp;13.0+</a>, <a href=\"http://windows.microsoft.com/ru-ru/internet-explorer/ie-11-worldwide-languages\">Internet&nbsp;Explorer&nbsp;11.0+</a>.";
-                } else*/
-            //{
+                recommendedDiv.innerHTML = "Ваш браузер или видеокарта не поддерживает webGL, рекомендуется просмотр в браузерах <a href=\"http://www.google.com/chrome\">Google&nbsp;Chrome&nbsp;9.0+</a>, <a href=\"http://www.mozilla.org/ru/firefox/new/\">Mozilla&nbsp;Firefox&nbsp;4.0+</a>, <a href=\"http://www.opera.com/ru\">Opera&nbsp;13.0+</a>, <a href=\"http://windows.microsoft.com/ru-ru/internet-explorer/ie-11-worldwide-languages\">Internet&nbsp;Explorer&nbsp;11.0+</a>";
 
-                if(!Detector.webgl)
-                {
+            }
+            else
+            {
 
-                    var globeDiv = document.getElementById("globe-container");
-                    globeDiv.innerHTML = "<img id=\"globe-image\" width=\"600px\" src=\"img/globe.png\" />";
+                var container = document.getElementById('globe-container');
 
-/*                    if (window.WebGLRenderingContext)
-                        {
-                            var recommendedDiv = document.getElementById("recommendedBrowsers");
-                            recommendedDiv.innerHTML = "Ваша видеокарта не поддерживает webGL";
-                        }
-                    else
-                        {
-                            var recommendedDiv = document.getElementById("recommendedBrowsers");
-                            recommendedDiv.innerHTML = "Ваш браузер или видеокарта не поддерживает webGL, рекомендуется просмотр в браузерах <a href=\"http://www.google.com/chrome\">Google&nbsp;Chrome&nbsp;9.0+</a>, <a href=\"http://www.mozilla.org/ru/firefox/new/\">Mozilla&nbsp;irefox&nbsp;4.0+</a>, <a href=\"http://www.opera.com/ru\">Opera&nbsp;13.0+</a>, <a href=\"http://windows.microsoft.com/ru-ru/internet-explorer/ie-11-worldwide-languages\">Internet&nbsp;Explorer&nbsp;11.0+</a>.";
-                        }*/
-                            var recommendedDiv = document.getElementById("recommendedBrowsers");
-                            recommendedDiv.innerHTML = "Ваш браузер или видеокарта не поддерживает webGL, рекомендуется просмотр в браузерах <a href=\"http://www.google.com/chrome\">Google&nbsp;Chrome&nbsp;9.0+</a>, <a href=\"http://www.mozilla.org/ru/firefox/new/\">Mozilla&nbsp;irefox&nbsp;4.0+</a>, <a href=\"http://www.opera.com/ru\">Opera&nbsp;13.0+</a>, <a href=\"http://windows.microsoft.com/ru-ru/internet-explorer/ie-11-worldwide-languages\">Internet&nbsp;Explorer&nbsp;11.0+</a>.";
+                // We're going to ask a file for the JSON data.
+                xhr = new XMLHttpRequest();
 
-                }
+                // Where do we get the data?
+	            xhr.open( 'GET', 'data/rank.json', true );
 
-                else
-                {
+                // What do we do when we have it?
+                xhr.onreadystatechange = function() {
 
-                    var container = document.getElementById('globe-container');
-
-                    // We're going to ask a file for the JSON data.
-                    xhr = new XMLHttpRequest();
-
-                    // Where do we get the data?
-    			    xhr.open( 'GET', 'data/rank.json', true );
-
-                    // What do we do when we have it?
-                    xhr.onreadystatechange = function() {
-
-                        // If we've received the data
-                        if ( xhr.readyState === 4 && xhr.status === 200 ){
+                    // If we've received the data
+                    if ( xhr.readyState === 4 && xhr.status === 200 ){
                 
-                            // Parse the JSON
-                            var data = JSON.parse( xhr.responseText );
+                        // Parse the JSON
+                        var data = JSON.parse( xhr.responseText );
 
-                            // Remove globe image 
-                            /*var glimage = document.getElementById("globe-image");
+                        // Remove globe image 
+                        /*var glimage = document.getElementById("globe-image");
 
-                            container.removeChild(glimage);*/
+                        container.removeChild(glimage);*/
 
-                            // Make the globe
-                            var globe = new DAT.Globe( container );        
+                        // Make the globe
+                        var globe = new DAT.Globe( container );        
                 
-                            // Tell the globe about your JSON data
-                            globe.addData(data, {format: 'magnitude'});
-	           
-                            // Create the geometry
-                            globe.createPoints();
+                        // Tell the globe about your JSON data
+                        globe.addData(data, {format: 'magnitude'});
+	            
+                        // Create the geometry
+                        globe.createPoints();
                 
-                            // Begin animation
-                            globe.animate();
+                        // Begin animation
+                        globe.animate();
 
-          		        }
-
-                    };
-                
-                    // Begin request
-                    xhr.send( null );
+          		    }
                 };
-            //};
+                
+                // Begin request
+                xhr.send( null );
+            };
 
-        $(document).ready(function() {
+            if (!Modernizr.video){
 
-/*            $(".btn-slide").click(function(){
-                //alert(1);
-            $("#panel").slideToggle("fast");
-            //$(this).toggleClass("active");
-            //$("#panel").addClass('tpanel');
-            });*/
-
-            $("#video").click(function(){
-
-                $("#rankName").hide();
-                $("#globe-container").hide();
-
-
-/*if (document.all) {*/
-if ((document.all && !window.atob) || (browserName == 'Safari') || (browserName == 'Internet Explorer')){
-
-    //alert('kokoko');
-
-    jwplayer("video-container").setup({
+                jwplayer("video-container").setup({
                     primary: "flash",
                     width: 560,
                     height: 320,
@@ -315,41 +282,40 @@ if ((document.all && !window.atob) || (browserName == 'Safari') || (browserName 
                         sources: [                            
                             { file: "http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v640.m4v", label: "640p" },
                             { file: "http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v320.m4v", label: "320p" }
-                            //{ file: "data/video/22_01/p1v1920.mp4", label: "1920p HD" }
                         ],
                         title: "Построение социально-сетевых сервисов как многоагентных систем"
                     }]
                 });
-    }
-else 
-{ 
-    $("#video-container").html('<video width="560" controls="controls"><source src="http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v640.mp4" type="video/mp4"  /><source src="http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v640.webm" type="video/webm" /></video>');
-}   
+            }
+            else
+            {
+                $("#video-container").html('<video id="my-video" width="560" controls="controls"><source src="http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v640.webm" type="video/webm" /><source src="http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v640.mp4" type="video/mp4"  /></video>');
+            }
 
-                
-/*                jwplayer("video-container").setup({
-                    primary: "flash",
-                    width: 560,
-                    height: 320,
-                    playlist: [{    
-                        //file: "rtmp://application/mp4:myVideo.mp4",  
-                        //file: "rtmp://application/mp4:myVideo.mp4",
-                        //http://globe/data/video/22_01/seminar_v640.m4v 
-                        sources: [                            
-                            { file: "data/video/22_01/seminar_v640.m4v", label: "640p" },
-                            { file: "data/video/22_01/seminar_v320.m4v", label: "320p" },
-                            //{ file: "data/video/22_01/p1v1920.mp4", label: "1920p HD" }
-                        ],
-                        title: "Построение социально-сетевых сервисов как многоагентных систем"
-                    }]
-                });*/
+            $(document).ready(function() {
 
-            //alert(1);
-            
-            //$(this).toggleClass("active");
-            //$("#panel").addClass('tpanel');
+                $("#hide-video-container").hide();
+                $("#video-container").hide();
+
+                $("#video").click(function(){
+
+                    $("#rankName").hide();
+                    $("#globe-container").hide();
+                    $("#hide-video-container").show();
+                    $("#video-container").show();
+
+                });
+
+                $("#hide-video").click(function(){
+
+                    $("#hide-video-container").hide();
+                    $("#video-container").hide();
+                    $("#rankName").show();
+                    $("#globe-container").show();
+                    document.getElementById('my-video').pause();
+                    
+                });
             });
-        });
         </script>
 
 <?php

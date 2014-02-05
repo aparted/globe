@@ -1,0 +1,35 @@
+<?php
+// making json file from csv
+//$json_data = "[";
+
+/*if (($handle = fopen("data/rank.csv", "r")) !== FALSE) {
+    while (($data = fgetcsv($handle, ",")) !== FALSE) {
+        $tmp_data = "";
+        $flag = 0;*/
+
+//        $data[2] = (log(5)/(log($data[2]+4)));
+//$data[2] = (1/log($data[2]+4)/(1/log(5)-1/log(20105))-(1/log(20105)/(1/log(5)-1/log(20105))))*0.99+0.01;
+//        $data[2] = (1/(1+($data[2]+1)/20101));
+//          $data[2] = pow(2, 20101)/(pow(2, 20101) + pow(2, $data[2]));
+//pow(1000000000000000000000000000000000, ((20101-$data[2])/20101)-1)); // change magnitude
+        //print($data[2].'-------');
+
+/*        for ($c=0; $c < count($data); $c++) {        	
+
+            if (($data[$c] == "") OR (count($data) <>3) ) $flag = 1;
+            $tmp_data .= round($data[$c], 3).",";           
+        }
+*/
+//print_r($tmp_data);
+/*        if ($flag == 0) $json_data .= $tmp_data;
+    }
+    fclose($handle);
+
+    $json_data = substr($json_data, 0, -1)."]";
+    //echo $json_data;
+	
+	$json_file = fopen("data/test.json", "w+");
+    fwrite ( $json_file , $json_data);
+    fclose($json_file);
+}*/
+?>
