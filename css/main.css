@@ -355,8 +355,13 @@ height: 40px;
  */
 
 .hidden {
-    display: none !important;
+    /*display: none !important;*/
     visibility: hidden;
+}
+
+.shown {
+    /*display: block; !important;*/
+    visibility: visible;
 }
 
 /*

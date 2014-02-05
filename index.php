@@ -77,11 +77,11 @@
                         <div id="globe-container">
                         </div>
 
-                        <div id="hide-video-container">
+                        <div id="hide-video-container" class="hidden">
                             <a href="#" id="hide-video">закрыть</a>
                         </div>
 
-                        <div id="video-container">
+                        <div id="video-container" class="hidden">
                         </div>
                     </div>
                 </div>
@@ -165,7 +165,7 @@
 
         
         <script type="text/javascript">
-            function goto(id, t){   
+            function goto(id, link){   
                 //animate to the div id.
                 $("#box_wrapper").animate({"left": -($(id).position().left)}, 600);
                     
@@ -173,7 +173,7 @@
                 $('#navigation a').removeClass('active_blob');
                     
                 // add active class to the current link
-                $(t).addClass('active_blob');    
+                $(link).addClass('active_blob');    
             }
         </script>        
 
@@ -294,22 +294,19 @@
 
             $(document).ready(function() {
 
-                $("#hide-video-container").hide();
-                $("#video-container").hide();
-
                 $("#video").click(function(){
 
                     $("#rankName").hide();
                     $("#globe-container").hide();
-                    $("#hide-video-container").show();
-                    $("#video-container").show();
+                    $("#hide-video-container").removeClass("hidden");                    
+                    $("#video-container").removeClass("hidden");
 
                 });
 
                 $("#hide-video").click(function(){
 
-                    $("#hide-video-container").hide();
-                    $("#video-container").hide();
+                    $("#hide-video-container").addClass("hidden");
+                    $("#video-container").addClass("hidden");
                     $("#rankName").show();
                     $("#globe-container").show();
                     document.getElementById('my-video').pause();
