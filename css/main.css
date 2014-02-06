@@ -222,6 +222,7 @@ header #title {
     /*margin-top: 10px;
     padding: 5px 10px;*/
     text-align: center;
+    height: 15px;
     /*border-bottom: 2px dotted rgb(204, 204, 204);*/
 }
 
@@ -235,18 +236,61 @@ header #title {
     text-decoration: none;
 }
 
+#next-sem{
+    position: relative;
+    cursor: pointer;
+    text-align: left;
+    float:left;
+    width: 200px;
+    height: 15px;
+    margin: 0px;
+}
+
+#next-sem a{
+    width: 200px;
+    height: 10px;
+    border: 0;
+    display: inline-block;
+    text-decoration: underline;
+
+}
+
+#prev-sem{
+    position: relative;
+    cursor: pointer;
+    text-align: right;
+    float: right;
+    width: 200px;
+    height: 15px;
+    margin: 0px;
+}
+
+#prev-sem a{
+    width: 200px;
+    height: 10px;
+    border: 0;
+    display: inline-block;
+    text-decoration: underline;
+}
+
 a.active_blob {
     background-color: white;
 }
 
-ul {
+.navigation-list {
+    width: 640px;
+    padding: 0px;
     margin: 0px;
     list-style: disc;
+    float: left;
+    height: 15px;
 }
 
-li {
+.navigation-list li {
     display: inline;
-    margin-right: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    height: 15px;
 }
 
 h3.announcement-theme{

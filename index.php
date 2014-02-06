@@ -114,14 +114,18 @@
                     <hr>
 
                     <!--Slider HTML-->
-
                     <div id="navigation">
+                        <!--<div id="next-sem">
+                            <a onClick="nextSem()"><--следующий&nbsp;семинар</a>
+                        </div>-->
                         <ul class="navigation-list">
-                            <li><a class="active_blob" href="#" onClick="goto('#announcement2', this); return false">&nbsp;</a></li>
-                            <li><a href="#" onClick="goto('#announcement1', this); return false">&nbsp;</a></li>
+                            <li><a id="announcement2_blob" class="active_blob" href="#" onClick="goto('#announcement2', this); return false">&nbsp;</a></li>
+                            <li><a id="announcement1_blob" href="#" onClick="goto('#announcement1', this); return false">&nbsp;</a></li>
                         </ul>
+                        <!--<div id="prev-sem">
+                            <a onClick="prevSem()">предыдущий&nbsp;семинар</a>
+                        </div>-->
                     </div>
-
                     <div id="content_wrapper">
                         <div id="box_wrapper" style="left: 0px">
                             <div id="announcement2" class="content_box">
@@ -137,7 +141,8 @@
                                     Реализация проекта призвана устранить разрыв между НГУ и ведущими мировыми университетами в области применения электронных средств обучения.
                                     Будут рассмотрены направления создания механизмов и нормативного обеспечения смешанного обучения, создания службы технической поддержки и поддержки пользователей,
                                     внедрения электронных средств обучения и управления учебным процессом, информационной и методической поддержки разработки образовательного контента,
-                                    программы повышения квалификации НПР НГУ по использованию технологии смешанного обучения.</h4>
+                                    программы повышения квалификации НПР НГУ по использованию технологии смешанного обучения.<br>
+                                    <a href="#" class="prev-sem-announce" onClick="$('#announcement1_blob').click(); return false">Предыдущий семинар --></a></h4>
                                 </div>
                             </div>
 
@@ -165,6 +170,12 @@
 
         
         <script type="text/javascript">
+
+            var i = 2;
+            var MAXI=2;
+
+            $("#next-sem").addClass("hidden");
+
             function goto(id, link){   
                 //animate to the div id.
                 $("#box_wrapper").animate({"left": -($(id).position().left)}, 600);
@@ -173,8 +184,34 @@
                 $('#navigation a').removeClass('active_blob');
                     
                 // add active class to the current link
-                $(link).addClass('active_blob');    
+                $(link).addClass('active_blob');
+
+                i = id[13]*1;
+
+                $("#next-sem").removeClass("hidden");                    
+                $("#prev-sem").removeClass("hidden");
+
+                if (i == MAXI) {
+                    $("#next-sem").addClass("hidden");
+                }
+
+                if (i == 1) {
+                    $("#prev-sem").addClass("hidden");
+                }
             }
+
+
+            function prevSem(){
+
+                goto('#announcement'+(i-1),'#announcement'+(i-1)+'_blob');
+
+            }
+
+            function nextSem(){
+
+                goto('#announcement'+(i+1),'#announcement'+(i+1)+'_blob');
+            } 
+
         </script>        
 
         <div class="push"></div>
@@ -309,7 +346,7 @@
                     $("#video-container").addClass("hidden");
                     $("#rankName").show();
                     $("#globe-container").show();
-                    document.getElementById('my-video').pause();
+                    document.getElementById("my-video").pause();
                     
                 });
             });
