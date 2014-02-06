@@ -77,11 +77,11 @@
                         <div id="globe-container">
                         </div>
 
-                        <div id="hide-video-container" class="hidden">
+                        <div id="hide-video-container">
                             <a href="#" id="hide-video">закрыть</a>
                         </div>
 
-                        <div id="video-container" class="hidden">
+                        <div id="video-container">
                         </div>
                     </div>
                 </div>
@@ -333,26 +333,62 @@
                 $("#video-container").html('<video id="my-video" width="560" controls="controls"><source src="http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v640.webm" type="video/webm" /><source src="http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v640.mp4" type="video/mp4"  /></video>');
             }
 
+            var showVideo = false;
+
             $(document).ready(function() {
+
+                $("#video-container").toggle(showVideo);
+                $("#hide-video-container").toggle(showVideo);
 
                 $("#video").click(function(){
 
-                    $("#rankName").hide();
-                    $("#globe-container").hide();
-                    $("#hide-video-container").removeClass("hidden");                    
-                    $("#video-container").removeClass("hidden");
+                    showVideo=!showVideo;
+                    viewMod(showVideo);
+
+                    console.log(showVideo);
 
                 });
 
                 $("#hide-video").click(function(){
 
-                    $("#hide-video-container").addClass("hidden");
-                    $("#video-container").addClass("hidden");
+                    showVideo=!showVideo;
+                    viewMod(showVideo);
+
+                    console.log(showVideo);
+                });
+
+                var viewMod = function(flag){
+                    $("#video-container").toggle(flag);
+                    $("#hide-video-container").toggle(flag);
+                    $("#rankName").toggle(!flag);
+                    $("#globe-container").toggle(!flag);
+                    if (!flag) {
+                        document.getElementById("my-video").pause();
+                    }
+                };
+
+                /*$("#video-container").hide();
+
+                $("#video").click(function(){
+
+
+
+                    $("#rankName").hide();
+                    $("#globe-container").hide();
+                    $("#hide-video-container").show();                    
+                    $("#video-container").show();
+
+                });
+
+                $("#hide-video").click(function(){
+
+                    $("#hide-video-container").hide();
+                    $("#video-container").hide();
                     $("#rankName").show();
                     $("#globe-container").show();
                     document.getElementById("my-video").pause();
                     
-                });
+                });*/
             });
         </script>
 
