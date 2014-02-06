@@ -115,16 +115,16 @@
 
                     <!--Slider HTML-->
                     <div id="navigation">
-                        <!--<div id="next-sem">
-                            <a onClick="nextSem()"><--следующий&nbsp;семинар</a>
-                        </div>-->
+                        <div id="next-sem">
+                            <a onClick="nextSem()"><img src="img/arrow_left_1.png"></a>
+                        </div>
                         <ul class="navigation-list">
                             <li><a id="announcement2_blob" class="active_blob" href="#" onClick="goto('#announcement2', this); return false">&nbsp;</a></li>
                             <li><a id="announcement1_blob" href="#" onClick="goto('#announcement1', this); return false">&nbsp;</a></li>
                         </ul>
-                        <!--<div id="prev-sem">
-                            <a onClick="prevSem()">предыдущий&nbsp;семинар</a>
-                        </div>-->
+                        <div id="prev-sem">
+                            <a onClick="prevSem()"><img src="img/arrow_right_1.png"></a>
+                        </div>
                     </div>
                     <div id="content_wrapper">
                         <div id="box_wrapper" style="left: 0px">
