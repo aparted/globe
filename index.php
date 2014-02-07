@@ -67,22 +67,22 @@
             <div class="container">
                 <div class="left-col">
 
-                    <div class="main-container">
+                    <div id="main-container">
  
-                        <div id="rankName">
-                            <h2><center>Рейтинг вузов Webometrics</center></h2>
+                        <div id="rank-name">
+                            <!--<h2><center>Рейтинг вузов Webometrics</center></h2>-->
                             <div id="recommendedBrowsers"></div>
                         </div>
 
                         <div id="globe-container">
                         </div>
 
-                        <div id="hide-video-container">
+                        <!--<div id="hide-video-container">
                             <a href="#" id="hide-video">закрыть</a>
                         </div>
-
                         <div id="video-container">
-                        </div>
+                        </div>-->
+
                     </div>
                 </div>
                 <div class="right-col">
@@ -137,7 +137,7 @@
                                     <div class="btn-slide" ><hr/></div>   
 
                                     <h4 id="panel"> На заседании семинара будет представлен проект технологии смешанного обучения НГУ, подготовленный для программы повышения конкурентоспособности.
-                                    Цель проекта – создание и внедрение в НГУ модели (платформы)  электронного, онлайн и смешанного обучения.
+                                    Цель проекта – создание и внедрение в НГУ модели (платформы)  смешанного обучения.
                                     Реализация проекта призвана устранить разрыв между НГУ и ведущими мировыми университетами в области применения электронных средств обучения.
                                     Будут рассмотрены направления создания механизмов и нормативного обеспечения смешанного обучения, создания службы технической поддержки и поддержки пользователей,
                                     внедрения электронных средств обучения и управления учебным процессом, информационной и методической поддержки разработки образовательного контента,
@@ -222,7 +222,7 @@
         <footer>
             <div class="container">
                 <div class="footer-text">
-                    Разработано: <a href="http://www.mmedia.nsu.ru">ЦПП НГУ</a> | Данные: <a href="http://www.webometrics.info/en/world">Webometrics</a> | движок: <a href="http://www.chromeexperiments.com/globe"><ins>WebGL Globe</ins></a>
+                    Разработано: <a href="http://www.mmedia.nsu.ru">ЦПП НГУ</a> | Рейтинг вузов: <a href="http://www.webometrics.info/en/world">Webometrics</a> | движок: <a href="http://www.chromeexperiments.com/globe"><ins>WebGL Globe</ins></a>
                 </div>
             </div>
         </footer>
@@ -259,61 +259,87 @@
 
             browserName = browser();
 
-            if(!Detector.webgl)
-            {
+            addGlobe = function(){
+                if(!Detector.webgl)
+                {
 
-                var globeDiv = document.getElementById("globe-container");
-                globeDiv.innerHTML = "<img id=\"globe-image\" width=\"600px\" src=\"img/globe.png\" />";
+                    var globeDiv = document.getElementById("globe-container");
+                    globeDiv.innerHTML = "<img id=\"globe-image\" width=\"600px\" src=\"img/globe.png\" />";
 
-                var recommendedDiv = document.getElementById("recommendedBrowsers");
-                recommendedDiv.innerHTML = "Ваш браузер или видеокарта не поддерживает webGL, рекомендуется просмотр в браузерах <a href=\"http://www.google.com/chrome\">Google&nbsp;Chrome&nbsp;9.0+</a>, <a href=\"http://www.mozilla.org/ru/firefox/new/\">Mozilla&nbsp;Firefox&nbsp;4.0+</a>, <a href=\"http://www.opera.com/ru\">Opera&nbsp;13.0+</a>, <a href=\"http://windows.microsoft.com/ru-ru/internet-explorer/ie-11-worldwide-languages\">Internet&nbsp;Explorer&nbsp;11.0+</a>";
+                    var recommendedDiv = document.getElementById("recommendedBrowsers");
+                    recommendedDiv.innerHTML = "Ваш браузер или видеокарта не поддерживает webGL, рекомендуется просмотр в браузерах <a href=\"http://www.google.com/chrome\">Google&nbsp;Chrome&nbsp;9.0+</a>, <a href=\"http://www.mozilla.org/ru/firefox/new/\">Mozilla&nbsp;Firefox&nbsp;4.0+</a>, <a href=\"http://www.opera.com/ru\">Opera&nbsp;13.0+</a>, <a href=\"http://windows.microsoft.com/ru-ru/internet-explorer/ie-11-worldwide-languages\">Internet&nbsp;Explorer&nbsp;11.0+</a>";
 
-            }
-            else
-            {
+                }
+                else
+                {
 
-                var container = document.getElementById('globe-container');
+                    var container = document.getElementById('globe-container');
 
-                // We're going to ask a file for the JSON data.
-                xhr = new XMLHttpRequest();
+                    // We're going to ask a file for the JSON data.
+                    xhr = new XMLHttpRequest();
 
-                // Where do we get the data?
-	            xhr.open( 'GET', 'data/rank.json', true );
+                    // Where do we get the data?
+    	            xhr.open( 'GET', 'data/rank.json', true );
 
-                // What do we do when we have it?
-                xhr.onreadystatechange = function() {
+                    // What do we do when we have it?
+                    xhr.onreadystatechange = function() {
 
-                    // If we've received the data
-                    if ( xhr.readyState === 4 && xhr.status === 200 ){
+                        // If we've received the data
+                        if ( xhr.readyState === 4 && xhr.status === 200 ){
                 
-                        // Parse the JSON
-                        var data = JSON.parse( xhr.responseText );
+                            // Parse the JSON
+                            var data = JSON.parse( xhr.responseText );
 
-                        // Remove globe image 
-                        /*var glimage = document.getElementById("globe-image");
+                            // Remove globe image 
+                            /*var glimage = document.getElementById("globe-image");
 
-                        container.removeChild(glimage);*/
+                            container.removeChild(glimage);*/
 
-                        // Make the globe
-                        var globe = new DAT.Globe( container );        
+                            // Make the globe
+                            var globe = new DAT.Globe( container );        
                 
-                        // Tell the globe about your JSON data
-                        globe.addData(data, {format: 'magnitude'});
+                            // Tell the globe about your JSON data
+                            globe.addData(data, {format: 'magnitude'});
 	            
-                        // Create the geometry
-                        globe.createPoints();
+                            // Create the geometry
+                            globe.createPoints();
                 
-                        // Begin animation
-                        globe.animate();
+                            // Begin animation
+                            globe.animate();
 
-          		    }
-                };
+              		    }
+                    };
                 
-                // Begin request
-                xhr.send( null );
+                    // Begin request
+                    xhr.send( null );
+                };
             };
 
-            if (!Modernizr.video){
+            addGlobe();
+
+            addVideo = function(){
+                if (!Modernizr.video){
+
+                    jwplayer("video-container").setup({
+                        primary: "flash",
+                        width: 560,
+                        height: 320,
+                        playlist: [{    
+                            sources: [                            
+                                { file: "http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v640.m4v", label: "640p" },
+                                { file: "http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v320.m4v", label: "320p" }
+                            ],
+                            title: "Построение социально-сетевых сервисов как многоагентных систем"
+                        }]
+                    });
+                }
+                else
+                {
+                    $("#video-container").html('<video id="my-video" width="560" controls="controls"><source src="http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v640.webm" type="video/webm" /><source src="http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v640.mp4" type="video/mp4"  /></video>');
+                }
+            };
+
+            /*if (!Modernizr.video){
 
                 jwplayer("video-container").setup({
                     primary: "flash",
@@ -331,11 +357,58 @@
             else
             {
                 $("#video-container").html('<video id="my-video" width="560" controls="controls"><source src="http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v640.webm" type="video/webm" /><source src="http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v640.mp4" type="video/mp4"  /></video>');
-            }
+            }*/
 
             //var showVideo = false;
 
+            $("#video").click(function(){
+
+                $("#hide-video-container").remove();
+                $("#video-container").remove();
+
+                $("#rank-name").remove();
+                $("#globe-container").remove();
+
+                var hideVideoContainer = document.createElement('div');
+                var videoContainer = document.createElement('div');
+
+                hideVideoContainer.id = 'hide-video-container';
+                videoContainer.id = 'video-container';
+
+                $("#main-container").append(hideVideoContainer);
+                $("#main-container").append(videoContainer);
+                $("#hide-video-container").html('<a href="#" id="hide-video">закрыть</a>')
+
+                addVideo();
+                
+            });
+
+            $("#main-container").on( "click", "#hide-video", function(){
+
+                //alert('kokoko');
+                   
+                $("#hide-video-container").remove();
+                $("#video-container").remove();
+
+                var rankName = document.createElement('div');
+                var globeContainer = document.createElement('div');
+
+                rankName.id = 'rank-name';
+                globeContainer.id = 'globe-container';
+
+                $("#main-container").append(rankName);
+                $("#main-container").append(globeContainer);
+                $("#rank-name").html('<div id="recommendedBrowsers"></div>');
+                
+                addGlobe();
+                    
+            });
+
             $(document).ready(function() {
+
+
+                //$("#rank-name").hide();
+                //$("#globe-container").hide();
 
                 /*$("#video-container").toggle(showVideo);
                 $("#hide-video-container").toggle(showVideo);
@@ -357,34 +430,22 @@
                 var viewMod = function(flag){
                     $("#video-container").toggle(flag);
                     $("#hide-video-container").toggle(flag);
-                    $("#rankName").toggle(!flag);
+                    $("#rank-name").toggle(!flag);
                     $("#globe-container").toggle(!flag);
                     if (!flag) {
                         document.getElementById("my-video").pause();
                     }
                 };*/
 
-                $("#video-container").hide();
-                $("#hide-video-container").hide();
-
-                $("#video").click(function(){
-
-                    $("#rankName").hide();
-                    $("#globe-container").hide();
-                    $("#hide-video-container").show();                    
-                    $("#video-container").show();
-
-                });
-
-                $("#hide-video").click(function(){
-
-                    $("#hide-video-container").hide();
+                /*if (browserName == "Internet Explorer"){
+                    $("#video-container").addClass("hidden");
+                }
+                else{
                     $("#video-container").hide();
-                    $("#rankName").show();
-                    $("#globe-container").show();
-                    document.getElementById("my-video").pause();
-                    
-                });
+                }
+
+                $("#hide-video-container").hide();*/
+                
             });
         </script>
 
