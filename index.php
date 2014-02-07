@@ -333,19 +333,17 @@
                 $("#video-container").html('<video id="my-video" width="560" controls="controls"><source src="http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v640.webm" type="video/webm" /><source src="http://seminar.mmc.nsu.ru/data/video/22_01/seminar_v640.mp4" type="video/mp4"  /></video>');
             }
 
-            var showVideo = false;
+            //var showVideo = false;
 
             $(document).ready(function() {
 
-                $("#video-container").toggle(showVideo);
+                /*$("#video-container").toggle(showVideo);
                 $("#hide-video-container").toggle(showVideo);
 
                 $("#video").click(function(){
 
                     showVideo=!showVideo;
                     viewMod(showVideo);
-
-                    console.log(showVideo);
 
                 });
 
@@ -354,7 +352,6 @@
                     showVideo=!showVideo;
                     viewMod(showVideo);
 
-                    console.log(showVideo);
                 });
 
                 var viewMod = function(flag){
@@ -365,13 +362,12 @@
                     if (!flag) {
                         document.getElementById("my-video").pause();
                     }
-                };
+                };*/
 
-                /*$("#video-container").hide();
+                $("#video-container").hide();
+                $("#hide-video-container").hide();
 
                 $("#video").click(function(){
-
-
 
                     $("#rankName").hide();
                     $("#globe-container").hide();
@@ -388,7 +384,7 @@
                     $("#globe-container").show();
                     document.getElementById("my-video").pause();
                     
-                });*/
+                });
             });
         </script>
 
