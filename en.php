@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Общеуниверситетский научно-методический семинар по информатизации учебного процесса и электронному обучению</title>
+        <title>University scientific seminar on informatization of education and e-learning</title>
         <meta name="description" content="сайт семинара НГУ по информатизации учебного процесса и электронному обучению">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
@@ -47,25 +47,26 @@
                 </div>
                 <div class="right-col">
 
-                    <h1>Whole university scientific seminar on informatization of educational process and e-learning</h1>
-                    <h3>Head: M.M. Lavrentirv, doctor of physico-mathematical sciences, vice rector for informatization of NSU</h3>
-                    <h3>Secretary: V.V. Kazakov, doctor of technical sciences, director of SSC NSU, <a href="mailto:vkazakov@phys.nsu.ru">vkazakov@phys.nsu.ru</a>, 363-40-67 <!--, +7 923 241 32 55--></h3>
+                    <h1>University scientific seminar on informatization of education and e-learning</h1>
+                    <h3>Head: Dr. M. Lavrentiev, vice rector for informatization of NSU</h3>
+                    <h3>Secretary: Dr. V. Kazakov, head of NSU software support center,<a href="mailto:vkazakov@phys.nsu.ru">vkazakov@phys.nsu.ru</a>, 363-40-67 <!--, +7 923 241 32 55--></h3>
                     <hr>
 
                     <div id="content_wrapper">
                         <div class="announcement">
                             <!--<h1><center>Внимание!</center></h1>-->
-                            <h3 class="announcement-theme">February 10 at 16:00 in the class 257 of the main body NSU seminar.<br><br>
-                            Theme of seminar: Discussion of the project of design, implementation and support of technology for blended learning at NSU in improving of the program the competitiveness<br>TOP-100.
+                            <h3 class="announcement-theme">February 10 at 4:00 pm. in the main building, room 257.<br><br>
+                            Theme of seminar: Discussion of the project of design, implementation and support of technology for blended learning at NSU within the framework of the program of competitiveness improving of the national universities.
 
                             <div class="btn-slide" ><hr/></div>
 
-                            <h4 id="panel"> At a meeting of the seminar was a draft technology for blended learning NSU, prepared for the program to improve the competitiveness.
-                            Objective of the project – creation and implementation of blended learning model (platform) in NSU.
-                            Implementation of the project is designed to bridge the gap between NSU and the world's leading universities in the use of e-learning.
-                            Were considered direction of establishing mechanisms and normative support of blended learning, creating technical support and customer support
-                            implementation of e-learning and learning management, information and methodological support for the development of educational content, 
-                            CPD training programs on the use of technology of  blended learning in NSU.<br>
+                            <h4 id="panel">At a meeting of the seminar was represented a draft technology for blended learning in NSU, prepared for the program of competitiveness improving.
+                                The goal of the project is a creation and an implementation of the blended learning model (platform) in NSU.
+                                Implementation of the project is designed to bridge the gap between NSU and the world's leading universities in the use of e-learning.
+                                Were considered the directions of establishing and technical support of blended learning,
+                                including customer support implementation of e-learning and learning management, information and methodological support for the development of educational content,
+                                CPD training programs on the use of technology of blended learning in NSU.<br>
+                            </h4>
                         </div>
                     </div>
                 </div>
