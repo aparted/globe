@@ -1,5 +1,5 @@
 <?php
-	if ($_GET["lang"] == en) {
+	if (isset($_GET["lang"])) {
 		include_once "en.php";
 	}else
 	{
