@@ -49,7 +49,7 @@
 
                     <h1>University scientific seminar on informatization of education and e-learning</h1>
                     <h3>Head: Dr. M. Lavrentiev, vice rector for informatization of NSU</h3>
-                    <h3>Secretary: Dr. V. Kazakov, head of NSU software support center,<a href="mailto:vkazakov@phys.nsu.ru">vkazakov@phys.nsu.ru</a>, 363-40-67 <!--, +7 923 241 32 55--></h3>
+                    <h3>Secretary: Dr. V. Kazakov, head of NSU software support center, <a href="mailto:vkazakov@phys.nsu.ru">vkazakov@phys.nsu.ru</a>, 363-40-67 <!--, +7 923 241 32 55--></h3>
                     <hr>
 
                     <div id="content_wrapper">
