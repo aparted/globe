@@ -328,10 +328,10 @@ DAT.Globe = function(container, colorFn) {
   }
 
   function onMouseWheel(event) {
-    /*event.preventDefault();
+    event.preventDefault();
     if (overRenderer) {
       zoom(event.wheelDeltaY * 0.3);
-    }*/
+    }
     return false;
   }
 
@@ -356,7 +356,7 @@ DAT.Globe = function(container, colorFn) {
 
   function zoom(delta) {
     distanceTarget -= delta;
-    distanceTarget = distanceTarget > 1000 ? 1000 : distanceTarget;
+    distanceTarget = distanceTarget > 1100 ? 1100 : distanceTarget;
     distanceTarget = distanceTarget < 350 ? 350 : distanceTarget;
   }
 
@@ -436,4 +436,3 @@ DAT.Globe = function(container, colorFn) {
   return this;
 
 };
-

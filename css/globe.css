@@ -1,6 +1,19 @@
 #globe-container{
 
-    height: 1000px;
-    width: 1000px;
+    height: 900px;
+    width: 1500px;
     margin: auto;
+}
+
+.container {
+	margin: 0 auto;
+	width: 100%;
+	min-width: 1500px;
+}
+
+.left-col {
+width: 100%;
+float: left;
+padding-right: 0px;
+padding-top: 0px;
 }

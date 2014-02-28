@@ -32,14 +32,17 @@
 
         <div id="wraper">
             <div class="container">
-
-                <div id="rank-name">
-                    <a href="http://www.webometrics.info/en/world"><h2><center>Webometrics ranking of universities</center></h2></a>
-                    <div id="recommendedBrowsers"></div>
+                <div class="left-col">
+                    <div id="main-container">
+                        <div id="rank-name">
+                            <a href="http://www.webometrics.info/en/world"><h2><center>Webometrics ranking of universities</center></h2></a>
+                            <div id="recommendedBrowsers"></div>
+                        </div>
+                        <div id="globe-container">
+                        </div>
+                    </div>
                 </div>
 
-                <div id="globe-container">
-                </div>
             </div>
         </div>        
 
@@ -104,7 +107,7 @@
                     xhr = new XMLHttpRequest();
 
                     // Where do we get the data?
-    	            xhr.open( 'GET', 'data/rank.json', true );
+                    xhr.open( 'GET', 'data/rank.json', true );
 
                     // What do we do when we have it?
                     xhr.onreadystatechange = function() {
@@ -125,14 +128,14 @@
                 
                             // Tell the globe about your JSON data
                             globe.addData(data, {format: 'magnitude'});
-	            
+                
                             // Create the geometry
                             globe.createPoints();
                 
                             // Begin animation
                             globe.animate();
 
-              		    }
+                        }
                     };
                 
                     // Begin request
