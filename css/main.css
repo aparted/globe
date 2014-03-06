@@ -107,10 +107,11 @@ textarea {
 body {
     font-family: 'eurofurence',Helvetica,Arial,sans-serif;
     color: #f3f3f3;
-    font-size: 14px;    
-    /*background: #001c28 url(img/loading.gif) center center no-repeat;*/
+    font-size: 14px;        
     /*background: #00233A;*/
-    background: #001c28 url('/img/bcg.jpg') top left repeat-x;
+    /*background: #676767 url('/img/bcg.jpg') top left repeat-x;*/
+    background: #456386 url('/img/bcg_blue.jpg') top left repeat-x;
+    
     height: 100%;
 }
 
@@ -120,9 +121,11 @@ body {
 }
 
 h1{
-    line-height: 1.1;
+    line-height: 1.4;
     font-size: 1.8em;
 }
+
+h2 {font-size: 1.2em;}
 
 h3 {}
 
@@ -209,14 +212,15 @@ header #title {
 }
 
 .content_box {
-    width: 620px;
+    width: 640px;
     height: 100%;
     float: left;
-    padding: 10px;
+    /*padding: 10px;*/
+    padding-right: 10px;
     padding-top: 5px;
     font-family: Helvetica;
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: normal;
 }
 
 #navigation {
@@ -314,7 +318,7 @@ h3.announcement-theme{
 }
 
 .announcement-theme{
-    text-align: left;
+    /*text-align: left;*/
 }
 
 #globe-container{
@@ -353,7 +357,7 @@ h3.announcement-theme{
 }
 
 .footer-text {
-    float: right;
+   /* float: right;*/
     width: 640px;
 }
 
