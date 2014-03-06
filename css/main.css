@@ -107,9 +107,10 @@ textarea {
 body {
     font-family: 'eurofurence',Helvetica,Arial,sans-serif;
     color: #f3f3f3;
-    font-size: 14px;
+    font-size: 14px;    
     /*background: #001c28 url(img/loading.gif) center center no-repeat;*/
-    background: #00233A;
+    /*background: #00233A;*/
+    background: #001c28 url('/img/bcg.jpg') top left repeat-x;
     height: 100%;
 }
 
@@ -154,10 +155,6 @@ header #title {
     width: 580px;
 }
 
-.note {
-    color: #f3f3f3;
-}
-
 #nav {
     margin: 0;
     padding: 0;
@@ -200,7 +197,7 @@ header #title {
 #content_wrapper {
     position:relative;
     overflow: hidden;
-    /*height: 400px;*/
+    height: 400px;
     /*box-shadow: -5px 5px 10px -10px rgba(0, 0, 0, 0.6), 5px 5px 10px -10px rgba(0, 0, 0, 0.6);*/
 }
 
