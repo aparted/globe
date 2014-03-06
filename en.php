@@ -56,16 +56,16 @@
                         <div class="announcement">
                             <!--<h1><center>Внимание!</center></h1>-->
                             <h3 class="announcement-theme">February 10 at 4:00 pm. in the main building, room 257.<br><br>
-                            Theme of seminar: Discussion of the project of design, implementation and support of technology for blended learning at NSU within the framework of the program of competitiveness improving of the national universities.
+                            Theme of the seminar: Discussion of the project of design, implementation and support of technology for blended learning at NSU
+                            within the framework of the program of competitiveness improvement of the national universities.
 
                             <div class="btn-slide" ><hr/></div>
 
-                            <h4 id="panel">At a meeting of the seminar was represented a draft technology for blended learning in NSU, prepared for the program of competitiveness improving.
-                                The goal of the project is a creation and an implementation of the blended learning model (platform) in NSU.
-                                Implementation of the project is designed to bridge the gap between NSU and the world's leading universities in the use of e-learning.
-                                Were considered the directions of establishing and technical support of blended learning,
-                                including customer support implementation of e-learning and learning management, information and methodological support for the development of educational content,
-                                CPD training programs on the use of technology of blended learning in NSU.<br>
+                            <h4 id="panel">The seminar presented a draft technology for blended learning at NSU, prepared for the competitiveness improvement program.
+                                The goal of the project is to create and implement the blended learning model (platform) at NSU.
+                                The project is designed to bridge the gap between NSU and the world's top universities in the use of e-learning.
+                                It has covered the directions of mechanisms establishment and technical support of blended learning, including customer support service implementation and that of e-learning and learning management,
+                                information and methodological support for the educational content development, CPD training programs on the use of technology of blended learning in NSU.<br>
                             </h4>
                         </div>
                     </div>
