@@ -119,7 +119,8 @@
                             <a onClick="nextSem()"><img src="img/arrow_left_1.png"></a>
                         </div> -->
                         <ul class="navigation-list">
-                            <li><a id="announcement2_blob" class="active_blob" href="#" onClick="goto('#announcement2', this); return false">&nbsp;</a></li>
+                            <li><a id="announcement3_blob" class="active_blob" href="#" onClick="goto('#announcement3', this); return false">&nbsp;</a></li>
+                            <li><a id="announcement2_blob" href="#" onClick="goto('#announcement2', this); return false">&nbsp;</a></li>
                             <li><a id="announcement1_blob" href="#" onClick="goto('#announcement1', this); return false">&nbsp;</a></li>
                         </ul>
 <!--                         <div id="prev-sem">
@@ -128,6 +129,25 @@
                     </div>
                     <div id="content_wrapper">
                         <div id="box_wrapper" style="left: 0px">
+                            <div id="announcement3" class="content_box">
+                                <div class="announcement">
+                                    <!--<h1><center>Внимание!</center></h1>-->
+                                    <div class="announcement-theme"><b>24 марта в 17:45 в аудитории 257 главного корпуса НГУ состоится семинар.</b><br>
+                                        Тема семинара: Современные средства онлайн обучения, обзор и тенденции развития.<br>
+                                        Докладчик: В.С. Ковалёв, ЦПП НГУ.
+                                    </div>
+
+                                    <div class="btn-slide" ><hr/></div>
+
+                                    <div id="panel"> Предметом доклада являются различные формы онлайн обучения. 
+                                        Будут рассмотрены цели, задачи, этапы  развития онлайн обучения за рубежом и в России, а также прогноз будущих моделей взаимодействия классических и онлайн форм обучения.
+                                        Проведён анализ современных инструментов формирования учебных материалов, курсов, формы проверки знаний. 
+                                        Описаны способы получения знаний, навыков, их сертификация, возможность осуществления различных стратегий обучения.
+                                        <br>
+                                    <a href="#" id="ann3-to-ann2">Предыдущий семинар --></a></div>
+                                </div>
+                            </div>
+
                             <div id="announcement2" class="content_box">
                                 <div class="announcement">
                                     <!--<h1><center>Внимание!</center></h1>-->
@@ -174,6 +194,9 @@
 
             $( "#ann2-to-ann1" ).click(function() {
                 $( "#announcement1_blob" ).click();
+            });
+            $( "#ann3-to-ann2" ).click(function() {
+                $( "#announcement2_blob" ).click();
             });
 
             var i = 2;
