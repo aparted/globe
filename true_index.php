@@ -70,7 +70,7 @@
                     <div id="main-container">
  
                         <div id="rank-name">
-                            <!--<h2><center>Рейтинг вузов Webometrics</center></h2>-->
+                            <h2><center>Рейтинг вузов Webometrics</center></h2>
                             <div id="recommendedBrowsers"></div>
                         </div>
 
