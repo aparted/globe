@@ -284,6 +284,8 @@ DAT.Globe = function(container, colorFn) {
     container.addEventListener('mouseup', onMouseUp, false);
     container.addEventListener('mouseout', onMouseOut, false);
 
+    target.y = rotation.y;
+
     mouseOnDown.x = - event.clientX;
     mouseOnDown.y = event.clientY;
 
@@ -375,8 +377,6 @@ DAT.Globe = function(container, colorFn) {
 
     rotation.x += (target.x - rotation.x) * 0.2;
 
-   
-    
     if (f == true){
       rotation.y += (target.y - rotation.y) * 0.2;}
     if (f == false){
