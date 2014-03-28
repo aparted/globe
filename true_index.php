@@ -406,7 +406,7 @@
                 $("#main-container").append(videoContainer);
                 $("#hide-video-container").html('<a href="#" id="hide-video">закрыть</a>')
 
-                $("#video-container").html('<video id="my-video" width="560" controls="controls"><source src="http://seminar.mmc.nsu.ru/data/video/24_03/seminar_v720.mp4" type="video/mp4" /></video>');
+                $("#video-container").html('<video id="my-video" width="560" controls="controls"><source src="http://seminar.mmc.nsu.ru/data/video/24_03/seminar_v640.webm" type="video/webm" /><source src="http://seminar.mmc.nsu.ru/data/video/24_03/seminar_v640.mp4" type="video/mp4" /></video>');
             });
 
             $("#video").click(function(){
