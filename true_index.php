@@ -119,7 +119,8 @@
                             <a onClick="nextSem()"><img src="img/arrow_left_1.png"></a>
                         </div> -->
                         <ul class="navigation-list">
-                            <li><a id="announcement3_blob" class="active_blob" href="#" onClick="goto('#announcement3', this); return false">&nbsp;</a></li>
+                            <li><a id="announcement4_blob" class="active_blob" href="#" onClick="goto('#announcement4', this); return false">&nbsp;</a></li>
+                            <li><a id="announcement3_blob" href="#" onClick="goto('#announcement3', this); return false">&nbsp;</a></li>
                             <li><a id="announcement2_blob" href="#" onClick="goto('#announcement2', this); return false">&nbsp;</a></li>
                             <li><a id="announcement1_blob" href="#" onClick="goto('#announcement1', this); return false">&nbsp;</a></li>
                         </ul>
@@ -129,6 +130,30 @@
                     </div>
                     <div id="content_wrapper">
                         <div id="box_wrapper" style="left: 0px">
+
+                            <div id="announcement4" class="content_box">
+                                <div class="announcement">
+                                    <!--<h1><center>Внимание!</center></h1>-->
+                                    <div class="announcement-theme">7 апреля в 17:45 в аудитории 257 главного корпуса НГУ состоится семинар.<br><br>
+                                        Тема семинара:  Система Canvas, как возможная альтернатива Moodle и Blackboard.<br>
+                                        Докладчик: Р.М. Кузьмин, директор «Ариясофт».
+                                    </div>
+
+                                    <div class="btn-slide" ><hr/></div>   
+
+                                    <div id="panel">На семинаре будут рассмотрены следующие вопросы:
+                                        <ul class="announcement4-ul">
+                                            <li class="announcement4-li">Ситуация на рынке LMS за последние 5 лет, динамика развития, причины.</li>
+                                            <li class="announcement4-li">Почему 20 университетов ежемесячно переходят с Blackboard на Canvas.</li>
+                                            <li class="announcement4-li">Преимущества Canvas</li>
+                                        </ul>
+                                        Компания «Ариясофт» занимается технологиями для образования с 2004 года, является резидентом технопарка.
+                                        <br>
+                                        <a href="#" id="ann4-to-ann3">Предыдущий семинар --></a>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div id="announcement3" class="content_box">
                                 <div class="announcement">
                                     <!--<h1><center>Внимание!</center></h1>-->
@@ -187,6 +212,7 @@
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -201,6 +227,9 @@
             });
             $( "#ann3-to-ann2" ).click(function() {
                 $( "#announcement2_blob" ).click();
+            });
+            $( "#ann4-to-ann3" ).click(function() {
+                $( "#announcement3_blob" ).click();
             });
 
             var i = 2;

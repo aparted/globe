@@ -41,6 +41,21 @@ html {
     text-shadow: none;
 }
 
+.announcement4-ul{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    padding: 0px;
+}
+
+.announcement4-li{
+    list-style-type: none;
+}
+
+.announcement4-li:before{
+    content: "- ";
+}
+
 ::selection {
     background: #b3d4fc;
     text-shadow: none;
