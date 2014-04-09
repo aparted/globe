@@ -134,7 +134,7 @@
                             <div id="announcement4" class="content_box">
                                 <div class="announcement">
                                     <!--<h1><center>Внимание!</center></h1>-->
-                                    <div class="announcement-theme"><b>7 апреля в 17:45 в аудитории 257 главного корпуса НГУ состоится семинар.</b><br>
+                                    <div class="announcement-theme"><b>7 апреля в 17:45 в аудитории 257 главного корпуса НГУ состоялся семинар.</b><br>
                                         Тема семинара:  Система Canvas, как возможная альтернатива Moodle и Blackboard.<br>
                                         Докладчик: Р.М. Кузьмин, директор «Ариясофт». <a href="#" id="video4">смотреть видео</a>
                                     </div>
