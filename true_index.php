@@ -149,6 +149,9 @@
                                         </ul>
                                         Компания «Ариясофт» занимается технологиями для образования с 2004 года, является резидентом технопарка.
                                         <br>
+                                        <a href="http://seminar.mmc.nsu.ru/data/LMSAccess/canvas_test_access.txt" download="canvas_test_access" id="canvas-test-access">Тестовый доступ Canvas</a><br>
+                                        <a href="http://seminar.mmc.nsu.ru/data/LMSAccess/moodle_test_access.txt" download="moodle_test_access" id="moodle-test-access">Тестовый доступ Moodle</a><br>
+                                        <a href="http://seminar.mmc.nsu.ru/data/LMSAccess/blackboard_test_access.docx" download="blackboard_test_access" id="blackboard-test-access">Тестовый доступ Blackboard</a><br>
                                         <a href="#" id="ann4-to-ann3">Предыдущий семинар --></a>
                                     </div>
                                 </div>
