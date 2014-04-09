@@ -150,7 +150,7 @@
                                         Компания «Ариясофт» занимается технологиями для образования с 2004 года, является резидентом технопарка.
                                         <br>
                                         <div class="btn-slide" ><hr/></div>
-                                        По следующим ссылкам Вы можете скачать файлы с описаниеми способов получения тестового доступа к различным LMS:<br>
+                                        По следующим ссылкам Вы можете скачать файлы с описаниями способов получения тестового доступа к различным LMS:<br>
                                         <a href="http://seminar.mmc.nsu.ru/data/LMSAccess/canvas_test_access.txt" download="canvas_test_access" id="canvas-test-access">Тестовый доступ Canvas</a><br>
                                         <a href="http://seminar.mmc.nsu.ru/data/LMSAccess/moodle_test_access.txt" download="moodle_test_access" id="moodle-test-access">Тестовый доступ Moodle</a><br>
                                         <a href="http://seminar.mmc.nsu.ru/data/LMSAccess/blackboard_test_access.docx" download="blackboard_test_access" id="blackboard-test-access">Тестовый доступ Blackboard</a><br>
