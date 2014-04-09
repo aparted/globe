@@ -150,7 +150,8 @@
                                         Компания «Ариясофт» занимается технологиями для образования с 2004 года, является резидентом технопарка.
                                         <br>
                                         <div class="btn-slide" ><hr/></div>
-                                        По следующим ссылкам Вы можете скачать файлы с описаниями способов получения тестового доступа к различным LMS:<br>
+                                        На семинаре была продемонстрирована работа системы <a href="http://novosibirsk.instructure.com">Canvas</a> и предоставлены <a href="http://seminar.mmc.nsu.ru/data/LMSAccess/canvas_test_access.txt" download="canvas_test_access" id="canvas-test-access">учетные данные</a> для пробной работы с системой. Тестовый доступ предоставлен сотрудникам  и преподавателям НГУ на 1 месяц с возможностью продления.<br>
+                                        Также у НГУ есть учетные данные для пробной работы с системой <a href="https://bb.vpgroup.ru">Blackboard</a>, а также на базе ЦПП НГУ для пробной работы развернуты системы <a href="moodle.mmc.nsu.ru">Moodle</a> и <a href="edx.mmc.nsu.ru">eDX</a> (свободня регистрация).<br>
                                         <a href="http://seminar.mmc.nsu.ru/data/LMSAccess/canvas_test_access.txt" download="canvas_test_access" id="canvas-test-access">Тестовый доступ Canvas</a><br>
                                         <a href="http://seminar.mmc.nsu.ru/data/LMSAccess/moodle_test_access.txt" download="moodle_test_access" id="moodle-test-access">Тестовый доступ Moodle</a><br>
                                         <a href="http://seminar.mmc.nsu.ru/data/LMSAccess/blackboard_test_access.docx" download="blackboard_test_access" id="blackboard-test-access">Тестовый доступ Blackboard</a><br>
@@ -501,7 +502,7 @@
 
                 $("#main-container").append(rankName);
                 $("#main-container").append(globeContainer);
-                $("#rank-name").html('<div id="recommendedBrowsers"></div>');
+                $("#rank-name").html('<h2><center>Рейтинг вузов Webometrics</center></h2><div id="recommendedBrowsers"></div>');
                 
                 addGlobe();
                     
