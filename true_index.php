@@ -141,7 +141,7 @@
 
                                     <div class="btn-slide" ><hr/></div>   
 
-                                    <div id="panel">На семинаре будут рассмотрены следующие вопросы:
+                                    <div id="panel">На семинаре рассмотривались следующие вопросы:
                                         <ul class="announcement4-ul">
                                             <li class="announcement4-li">Ситуация на рынке LMS за последние 5 лет, динамика развития, причины.</li>
                                             <li class="announcement4-li">Почему 20 университетов ежемесячно переходят с Blackboard на Canvas.</li>
@@ -149,9 +149,12 @@
                                         </ul>
                                         Компания «Ариясофт» занимается технологиями для образования с 2004 года, является резидентом технопарка.
                                         <br>
+                                        <div class="btn-slide" ><hr/></div>
+                                        По следующим ссылкам Вы можете скачать файлы с описаниеми способов получения тестового доступа к различным LMS:<br>
                                         <a href="http://seminar.mmc.nsu.ru/data/LMSAccess/canvas_test_access.txt" download="canvas_test_access" id="canvas-test-access">Тестовый доступ Canvas</a><br>
                                         <a href="http://seminar.mmc.nsu.ru/data/LMSAccess/moodle_test_access.txt" download="moodle_test_access" id="moodle-test-access">Тестовый доступ Moodle</a><br>
                                         <a href="http://seminar.mmc.nsu.ru/data/LMSAccess/blackboard_test_access.docx" download="blackboard_test_access" id="blackboard-test-access">Тестовый доступ Blackboard</a><br>
+                                        <div class="btn-slide" ><hr/></div>
                                         <a href="#" id="ann4-to-ann3">Предыдущий семинар --></a>
                                     </div>
                                 </div>
