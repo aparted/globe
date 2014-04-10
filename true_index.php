@@ -139,14 +139,6 @@
                                         Докладчик: Р.М. Кузьмин, директор «Ариясофт».<br>
                                         <a href="#" id="video4">смотреть видео</a><br>
                                         <a href="http://seminar.mmc.nsu.ru/data/presentation/7_04/presentation_7_04.pptx" download="presentation_7_04">скачать презентацию в формате pptx</a><br>
-                                        <hr>
-                                        Отчеты университетов о переходе на систему Canvas:
-                                        <ul class = "universities-reports">
-                                            <li><a href="http://seminar.mmc.nsu.ru/data/canvas/Auburn_University.pdf" download="Auburn_University">отчет Обернского университета о переходе на canvas</a></li>
-                                            <li><a href="http://seminar.mmc.nsu.ru/data/canvas/Brown_University.pdf" download="Brown_University">отчет Брауновского университета о переходе на canvas</a></li>
-                                            <li><a href="http://seminar.mmc.nsu.ru/data/canvas/SJSU.pdf" download="SJSU">отчет университета штата в Сан-Хосе о переходе на canvas</a><br></li>
-                                        </ul>
-                                        <a href="http://seminar.mmc.nsu.ru/data/canvas/support.pdf" download="support">скачать описание услуг воходящих в цену поддержки</a>
                                     </div>
 
                                     <div class="btn-slide" ><hr/></div>   
@@ -167,6 +159,14 @@
                                         <a href="http://seminar.mmc.nsu.ru/data/LMSAccess/bench_test_access.txt" download="bench_test_access" id="bench-test-access">Тестовый доступ Bench</a><br>
                                         <a href="http://seminar.mmc.nsu.ru/data/LMSAccess/moodle_test_access.txt" download="moodle_test_access" id="moodle-test-access">Тестовый доступ Moodle</a><br>
                                         <div class="btn-slide"><hr/></div>
+                                        Отчеты университетов о переходе на систему Canvas:
+                                        <ul class = "universities-reports">
+                                            <li><a href="http://seminar.mmc.nsu.ru/data/canvas/Auburn_University.pdf" download="Auburn_University">отчет Обернского университета о переходе на canvas</a></li>
+                                            <li><a href="http://seminar.mmc.nsu.ru/data/canvas/Brown_University.pdf" download="Brown_University">отчет Брауновского университета о переходе на canvas</a></li>
+                                            <li><a href="http://seminar.mmc.nsu.ru/data/canvas/SJSU.pdf" download="SJSU">отчет университета штата в Сан-Хосе о переходе на canvas</a><br></li>
+                                        </ul>
+                                        <a href="http://seminar.mmc.nsu.ru/data/canvas/support.pdf" download="support">скачать описание услуг воходящих в цену поддержки</a>
+                                        <hr/>
                                         <a href="#" id="ann4-to-ann3">Предыдущий семинар --></a>
                                     </div>
                                 </div>
