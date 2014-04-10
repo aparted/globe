@@ -224,3 +224,6 @@ pip-log.txt
 
 # LMSAccess
 data/LMSAccess/
+
+# canvas reports
+data/canvas/
