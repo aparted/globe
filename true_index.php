@@ -136,7 +136,17 @@
                                     <!--<h1><center>Внимание!</center></h1>-->
                                     <div class="announcement-theme"><b>7 апреля в 17:45 в аудитории 257 главного корпуса НГУ состоялся семинар.</b><br>
                                         Тема семинара:  Система Canvas, как возможная альтернатива Moodle и Blackboard.<br>
-                                        Докладчик: Р.М. Кузьмин, директор «Ариясофт». <a href="#" id="video4">смотреть видео</a>
+                                        Докладчик: Р.М. Кузьмин, директор «Ариясофт».<br>
+                                        <a href="#" id="video4">смотреть видео</a><br>
+                                        <a href="http://seminar.mmc.nsu.ru/data/presentation/7_04/presentation_7_04.pptx" download="presentation_7_04">скачать презентацию в формате pptx</a><br>
+                                        <hr>
+                                        Отчеты университетов о переходе на систему Canvas:
+                                        <ul class = "universities-reports">
+                                            <li><a href="http://seminar.mmc.nsu.ru/data/canvas/Auburn_University.pdf" download="Auburn_University">отчет Обернского университета о переходе на canvas</a></li>
+                                            <li><a href="http://seminar.mmc.nsu.ru/data/canvas/Brown_University.pdf" download="Brown_University">отчет Брауновского университета о переходе на canvas</a></li>
+                                            <li><a href="http://seminar.mmc.nsu.ru/data/canvas/SJSU.pdf" download="SJSU">отчет университета штата в Сан-Хосе о переходе на canvas</a><br></li>
+                                        </ul>
+                                        <a href="http://seminar.mmc.nsu.ru/data/canvas/support.pdf" download="support">скачать описание услуг воходящих в цену поддержки</a>
                                     </div>
 
                                     <div class="btn-slide" ><hr/></div>   
