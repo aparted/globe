@@ -1,4 +1,5 @@
 <?php
+phpinfo();
 /*function cidr_match($ip, $ranges)
 {
     $ranges = (array)$ranges;
@@ -26,5 +27,9 @@ else {
 }*/
 
 $dir = '/var/www/html/seminar';
-exec("cd $dir && git pull");
-echo 'Done.';
+
+//echo exec('whoami');
+echo exec("cd $dir");
+echo exec("sudo git pull");
+//if() echo 'Done.';
+?>
