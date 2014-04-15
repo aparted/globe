@@ -1,5 +1,5 @@
 <?php
-function cidr_match($ip, $ranges)
+/*function cidr_match($ip, $ranges)
 {
     $ranges = (array)$ranges;
     foreach($ranges as $range) {
@@ -23,4 +23,8 @@ else {
     header('HTTP/1.1 404 Not Found');
     echo '404 Not Found.';
     exit;
-}
+}*/
+
+$dir = '/var/www/html/seminar';
+exec("cd $dir && git pull");
+echo 'Done.';
