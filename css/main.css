@@ -129,7 +129,8 @@ body {
     font-size: 14px;        
     /*background: #00233A;*/
     /*background: #676767 url('/img/bcg.jpg') top left repeat-x;*/
-    background: #456386 url('/img/bcg_blue.jpg') top left repeat-x;
+    /*background: #456386 url('/img/bcg_blue.jpg') top left repeat-x;*/
+    background: #FFF;
     
     height: 100%;
 }
