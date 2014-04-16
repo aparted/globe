@@ -119,7 +119,8 @@
                             <a onClick="nextSem()"><img src="img/arrow_left_1.png"></a>
                         </div> -->
                         <ul class="navigation-list">
-                            <li><a id="announcement4_blob" class="active_blob" href="#" onClick="goto('#announcement4', this); return false">&nbsp;</a></li>
+                            <li><a id="announcement5_blob" class="active_blob" href="#" onClick="goto('#announcement5', this); return false">&nbsp;</a></li>
+                            <li><a id="announcement4_blob" href="#" onClick="goto('#announcement4', this); return false">&nbsp;</a></li>
                             <li><a id="announcement3_blob" href="#" onClick="goto('#announcement3', this); return false">&nbsp;</a></li>
                             <li><a id="announcement2_blob" href="#" onClick="goto('#announcement2', this); return false">&nbsp;</a></li>
                             <li><a id="announcement1_blob" href="#" onClick="goto('#announcement1', this); return false">&nbsp;</a></li>
@@ -130,6 +131,23 @@
                     </div>
                     <div id="content_wrapper">
                         <div id="box_wrapper" style="left: 0px">
+
+                            <div id="announcement5" class="content_box">
+                                <div class="announcement">
+                                    <div class="announcement-theme"><b>21 апреля в 17:45 в аудитории 257 главного корпуса НГУ состоится семинар.</b><br>
+                                        Тема семинара:  Междисциплинарное взаимодействие точных и гуманитарных наук: методология и история.<br>
+                                        Докладчики: Крайнева И.А., к.и.н., научный сотрудник ИСИ СО РАН, Марчук А.Г., д.ф.-м.н., директор ИСИ СО РАН, профессор НГУ
+                                    </div>
+
+                                    <div class="btn-slide" ><hr/></div>   
+
+                                    <div id="panel">В докладе рассматривается и анализируется отечественная практика использования методов точных наук – математики и информатики – в гуманитарной сфере,
+                                        а именно: в исторических исследованиях, источниковедении, музеологии, архивоведении, библиотечном деле: в той ее части, которая имеет дело с корпусом артефактов,
+                                        с историческим научным и культурным наследием. Междисциплинарность рассматривается в качестве методологической основы этого взаимодействия.<br>
+                                        <a href="#" id="ann5-to-ann4">Предыдущий семинар --></a>
+                                    </div>
+                                </div>    
+                            </div>
 
                             <div id="announcement4" class="content_box">
                                 <div class="announcement">
@@ -248,6 +266,9 @@
             });
             $( "#ann4-to-ann3" ).click(function() {
                 $( "#announcement3_blob" ).click();
+            });
+            $( "#ann5-to-ann4" ).click(function() {
+                $( "#announcement4_blob" ).click();
             });
 
             var i = 2;
