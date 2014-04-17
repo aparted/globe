@@ -521,8 +521,9 @@ height: 40px;
 }
 
 #recommendedBrowsers{
+    width: 560px;
     text-align: left;
-    margin-top: 18px;
+    margin-top: 0px;
 }
 
 .note{

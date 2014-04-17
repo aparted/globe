@@ -71,7 +71,7 @@
  
                         <div id="rank-name">
                             <h2><center>Рейтинг вузов Webometrics</center></h2>
-                            <div id="recommendedBrowsers"></div>
+                            <!--<div id="recommendedBrowsers"></div>-->
                         </div>
 
                         <div id="globe-container">
@@ -84,6 +84,7 @@
                         </div>-->
 
                     </div>
+                    <div id="recommendedBrowsers"></div>
                 </div>
                 <div class="right-col">
 <!--                     <ul id="nav">
