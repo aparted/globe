@@ -135,16 +135,17 @@
 
                             <div id="announcement5" class="content_box">
                                 <div class="announcement">
-                                    <div class="announcement-theme"><b>21 апреля в 17:45 в аудитории 257 главного корпуса НГУ состоится семинар.</b><br>
+                                    <div class="announcement-theme"><b>21 апреля в 17:45 в аудитории 257 главного корпуса НГУ состоялся семинар.</b><br>
                                         Тема семинара:  Междисциплинарное взаимодействие точных и гуманитарных наук: методология и история.<br>
-                                        Докладчики: Крайнева И.А., к.и.н., научный сотрудник ИСИ СО РАН, Марчук А.Г., д.ф.-м.н., директор ИСИ СО РАН, профессор НГУ
+                                        Докладчики: Крайнева И.А., к.и.н., научный сотрудник ИСИ СО РАН, Марчук А.Г., д.ф.-м.н., директор ИСИ СО РАН, профессор НГУ<br>
+                                        <a href="#" id="video5">смотреть видео</a><br>
                                     </div>
 
                                     <div class="btn-slide" ><hr/></div>   
 
-                                    <div id="panel">В докладе рассматривается и анализируется отечественная практика использования методов точных наук – математики и информатики – в гуманитарной сфере,
+                                    <div id="panel">В докладе рассматривалась и анализировалась отечественная практика использования методов точных наук – математики и информатики – в гуманитарной сфере,
                                         а именно: в исторических исследованиях, источниковедении, музеологии, архивоведении, библиотечном деле: в той ее части, которая имеет дело с корпусом артефактов,
-                                        с историческим научным и культурным наследием. Междисциплинарность рассматривается в качестве методологической основы этого взаимодействия.<br>
+                                        с историческим научным и культурным наследием. Междисциплинарность рассматривалась в качестве методологической основы этого взаимодействия.<br>
                                         <a href="#" id="ann5-to-ann4">Предыдущий семинар --></a>
                                     </div>
                                 </div>    
@@ -457,6 +458,26 @@
             }*/
 
             //var showVideo = false;
+
+            $("#video5").click(function(){
+                $("#hide-video-container").remove();
+                $("#video-container").remove();
+
+                $("#rank-name").remove();
+                $("#globe-container").remove();
+
+                var hideVideoContainer = document.createElement('div');
+                var videoContainer = document.createElement('div');
+
+                hideVideoContainer.id = 'hide-video-container';
+                videoContainer.id = 'video-container';
+
+                $("#main-container").append(hideVideoContainer);
+                $("#main-container").append(videoContainer);
+                $("#hide-video-container").html('<a href="#" id="hide-video">закрыть</a>')
+
+                $("#video-container").html('<video id="my-video" width="560" controls="controls"><source src="http://seminar.mmc.nsu.ru/data/video/21_04/21.04.14.webm" type="video/webm" /><source src="http://seminar.mmc.nsu.ru/data/video/21_04/21.04.14.mp4" type="video/mp4" /></video>');
+            });
 
             $("#video4").click(function(){
                 $("#hide-video-container").remove();
