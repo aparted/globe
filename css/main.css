@@ -352,6 +352,11 @@ h3.announcement-theme{
     width: 600px;
 }
 
+#globe-container-min{
+    height: 350px;
+    width: 350px;
+}
+
 #rank-name{
     text-align: justify;
     margin-bottom: 10px;
