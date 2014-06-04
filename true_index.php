@@ -120,7 +120,8 @@
                             <a onClick="nextSem()"><img src="img/arrow_left_1.png"></a>
                         </div> -->
                         <ul class="navigation-list">
-                            <li><a id="announcement5_blob" class="active_blob" href="#" onClick="goto('#announcement5', this); return false">&nbsp;</a></li>
+                            <li><a id="announcement6_blob" class="active_blob" href="#" onClick="goto('#announcement6', this); return false">&nbsp;</a></li>
+                            <li><a id="announcement5_blob" href="#" onClick="goto('#announcement5', this); return false">&nbsp;</a></li>
                             <li><a id="announcement4_blob" href="#" onClick="goto('#announcement4', this); return false">&nbsp;</a></li>
                             <li><a id="announcement3_blob" href="#" onClick="goto('#announcement3', this); return false">&nbsp;</a></li>
                             <li><a id="announcement2_blob" href="#" onClick="goto('#announcement2', this); return false">&nbsp;</a></li>
@@ -132,6 +133,30 @@
                     </div>
                     <div id="content_wrapper">
                         <div id="box_wrapper" style="left: 0px">
+
+                            <div id="announcement6" class="content_box">
+                                <div class="announcement">
+                                    <div class="announcement-theme"><b>11 июня в 17:45 в аудитории 257 главного корпуса НГУ состоится семинар.</b><br>
+                                        Тема семинара: Нужна ли электронная образовательная среда сегодняшнему студенту НГУ: мнение преподавателя.<br>
+                                        Докладчики: Е.Ю.Иванов, с.н.с. ИЭОПП СОРАН, доцент кафедры Экономической теории НГУ<br>
+                                    </div>
+
+                                    <div class="btn-slide" ><hr/></div>   
+
+                                    <div id="panel">Доклад посвящен анализу итогов опроса студентов 1 курса бакалавриата   и   1  курса  магистратуры  экономического  факультета,
+                                        изучавших одну образовательную дисциплину на основе "смешанной" модели использования    информационной   системы.   Основой   образовательной
+                                        информационной   системы  являлась  свободно-распространяемая  система Moodle.<br>
+                                        Основными темами опроса являлись:
+                                        <ol>
+                                            <li>Соответствие аудиторной и виртуальной составляющих курса</li>
+                                            <li>Подготовленность аудитории к использованию технологии</li>
+                                            <li>Выявление основных проблем использования ОИС</li>
+                                            <li>Эффективность  и  дальнейшие  перспективы  использования  подобных систем</li>
+                                        </ol>
+                                        <a href="#" id="ann6-to-ann5">Предыдущий семинар --></a>
+                                    </div>
+                                </div>    
+                            </div>
 
                             <div id="announcement5" class="content_box">
                                 <div class="announcement">
@@ -271,6 +296,9 @@
             });
             $( "#ann5-to-ann4" ).click(function() {
                 $( "#announcement4_blob" ).click();
+            });
+            $( "#ann6-to-ann5" ).click(function() {
+                $( "#announcement5_blob" ).click();
             });
 
             var i = 2;
