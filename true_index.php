@@ -505,7 +505,7 @@
                 $("#main-container").append(videoContainer);
                 $("#hide-video-container").html('<a href="#" id="hide-video">закрыть</a>')
 
-                $("#video-container").html('<video id="my-video" width="560" controls="controls"><source src="http://seminar.mmc.nsu.ru/data/video/11_06/seminar_v640.mp4" type="video/mp4" /></video>');
+                $("#video-container").html('<video id="my-video" width="560" controls="controls"><source src="http://seminar.mmc.nsu.ru/data/video/11_06/seminar_v640.webm" type="video/webm" /><source src="http://seminar.mmc.nsu.ru/data/video/11_06/seminar_v640.mp4" type="video/mp4" /></video>');
             });
 
             $("#video5").click(function(){
