@@ -139,6 +139,7 @@
                                     <div class="announcement-theme"><b>11 июня в 17:45 в аудитории 257 главного корпуса НГУ состоится семинар.</b><br>
                                         Тема семинара: Нужна ли электронная образовательная среда сегодняшнему студенту НГУ: мнение преподавателя.<br>
                                         Докладчик: Е.Ю.Иванов, с.н.с. ИЭОПП СОРАН, доцент кафедры Экономической теории НГУ<br>
+                                        <a href="#" id="video6">смотреть видео</a><br>
                                     </div>
 
                                     <div class="btn-slide" ><hr/></div>   
@@ -486,6 +487,26 @@
             }*/
 
             //var showVideo = false;
+
+            $("#video6").click(function(){
+                $("#hide-video-container").remove();
+                $("#video-container").remove();
+
+                $("#rank-name").remove();
+                $("#globe-container").remove();
+
+                var hideVideoContainer = document.createElement('div');
+                var videoContainer = document.createElement('div');
+
+                hideVideoContainer.id = 'hide-video-container';
+                videoContainer.id = 'video-container';
+
+                $("#main-container").append(hideVideoContainer);
+                $("#main-container").append(videoContainer);
+                $("#hide-video-container").html('<a href="#" id="hide-video">закрыть</a>')
+
+                $("#video-container").html('<video id="my-video" width="560" controls="controls"><source src="http://seminar.mmc.nsu.ru/data/video/11_06/seminar_v640.mp4" type="video/mp4" /></video>');
+            });
 
             $("#video5").click(function(){
                 $("#hide-video-container").remove();
