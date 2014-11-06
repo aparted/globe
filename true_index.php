@@ -71,7 +71,7 @@
  
                         <div id="rank-name">
                             <h2><center>Рейтинг вузов Webometrics</center></h2>
-                            <div id="recommendedBrowsers"></div>
+                            <!--<div id="recommendedBrowsers"></div>-->
                         </div>
 
                         <div id="globe-container">
@@ -84,6 +84,7 @@
                         </div>-->
 
                     </div>
+                    <div id="recommendedBrowsers"></div>
                 </div>
                 <div class="right-col">
 <!--                     <ul id="nav">
@@ -119,7 +120,8 @@
                             <a onClick="nextSem()"><img src="img/arrow_left_1.png"></a>
                         </div> -->
                         <ul class="navigation-list">
-                            <li><a id="announcement5_blob" class="active_blob" href="#" onClick="goto('#announcement5', this); return false">&nbsp;</a></li>
+                            <li><a id="announcement6_blob" class="active_blob" href="#" onClick="goto('#announcement6', this); return false">&nbsp;</a></li>
+                            <li><a id="announcement5_blob" href="#" onClick="goto('#announcement5', this); return false">&nbsp;</a></li>
                             <li><a id="announcement4_blob" href="#" onClick="goto('#announcement4', this); return false">&nbsp;</a></li>
                             <li><a id="announcement3_blob" href="#" onClick="goto('#announcement3', this); return false">&nbsp;</a></li>
                             <li><a id="announcement2_blob" href="#" onClick="goto('#announcement2', this); return false">&nbsp;</a></li>
@@ -132,18 +134,45 @@
                     <div id="content_wrapper">
                         <div id="box_wrapper" style="left: 0px">
 
-                            <div id="announcement5" class="content_box">
+                            <div id="announcement6" class="content_box">
                                 <div class="announcement">
-                                    <div class="announcement-theme"><b>21 апреля в 17:45 в аудитории 257 главного корпуса НГУ состоится семинар.</b><br>
-                                        Тема семинара:  Междисциплинарное взаимодействие точных и гуманитарных наук: методология и история.<br>
-                                        Докладчики: Крайнева И.А., к.и.н., научный сотрудник ИСИ СО РАН, Марчук А.Г., д.ф.-м.н., директор ИСИ СО РАН, профессор НГУ
+                                    <div class="announcement-theme"><b>11 июня в 17:45 в аудитории 257 главного корпуса НГУ состоялся семинар.</b><br>
+                                        Тема семинара: Нужна ли электронная образовательная среда сегодняшнему студенту НГУ: мнение преподавателя.<br>
+                                        Докладчик: Е.Ю.Иванов, с.н.с. ИЭОПП СОРАН, доцент кафедры Экономической теории НГУ<br>
+                                        <a href="#" id="video6">смотреть видео</a><br>
+                                        <a href="http://seminar.mmc.nsu.ru/data/presentation/11_06/ivanov_sem_nsu.ppt" download="ivanov_sem_nsu.ppt">скачать презентацию в формате ppt</a><br>
                                     </div>
 
                                     <div class="btn-slide" ><hr/></div>   
 
-                                    <div id="panel">В докладе рассматривается и анализируется отечественная практика использования методов точных наук – математики и информатики – в гуманитарной сфере,
+                                    <div id="panel">Доклад был посвящен анализу итогов опроса студентов 1 курса бакалавриата   и   1  курса  магистратуры  экономического  факультета,
+                                        изучавших одну образовательную дисциплину на основе "смешанной" модели использования    информационной   системы.   Основой   образовательной
+                                        информационной   системы  являлась  свободно-распространяемая  система Moodle.<br>
+                                        Основными темами опроса являлись:
+                                        <ol>
+                                            <li>Соответствие аудиторной и виртуальной составляющих курса</li>
+                                            <li>Подготовленность аудитории к использованию технологии</li>
+                                            <li>Выявление основных проблем использования ОИС</li>
+                                            <li>Эффективность  и  дальнейшие  перспективы  использования  подобных систем</li>
+                                        </ol>
+                                        <a href="#" id="ann6-to-ann5">Предыдущий семинар --></a>
+                                    </div>
+                                </div>    
+                            </div>
+
+                            <div id="announcement5" class="content_box">
+                                <div class="announcement">
+                                    <div class="announcement-theme"><b>21 апреля в 17:45 в аудитории 257 главного корпуса НГУ состоялся семинар.</b><br>
+                                        Тема семинара:  Междисциплинарное взаимодействие точных и гуманитарных наук: методология и история.<br>
+                                        Докладчики: Крайнева И.А., к.и.н., научный сотрудник ИСИ СО РАН, Марчук А.Г., д.ф.-м.н., директор ИСИ СО РАН, профессор НГУ<br>
+                                        <a href="#" id="video5">смотреть видео</a><br>
+                                    </div>
+
+                                    <div class="btn-slide" ><hr/></div>   
+
+                                    <div id="panel">В докладе рассматривалась и анализировалась отечественная практика использования методов точных наук – математики и информатики – в гуманитарной сфере,
                                         а именно: в исторических исследованиях, источниковедении, музеологии, архивоведении, библиотечном деле: в той ее части, которая имеет дело с корпусом артефактов,
-                                        с историческим научным и культурным наследием. Междисциплинарность рассматривается в качестве методологической основы этого взаимодействия.<br>
+                                        с историческим научным и культурным наследием. Междисциплинарность рассматривалась в качестве методологической основы этого взаимодействия.<br>
                                         <a href="#" id="ann5-to-ann4">Предыдущий семинар --></a>
                                     </div>
                                 </div>    
@@ -269,6 +298,9 @@
             });
             $( "#ann5-to-ann4" ).click(function() {
                 $( "#announcement4_blob" ).click();
+            });
+            $( "#ann6-to-ann5" ).click(function() {
+                $( "#announcement5_blob" ).click();
             });
 
             var i = 2;
@@ -456,6 +488,46 @@
             }*/
 
             //var showVideo = false;
+
+            $("#video6").click(function(){
+                $("#hide-video-container").remove();
+                $("#video-container").remove();
+
+                $("#rank-name").remove();
+                $("#globe-container").remove();
+
+                var hideVideoContainer = document.createElement('div');
+                var videoContainer = document.createElement('div');
+
+                hideVideoContainer.id = 'hide-video-container';
+                videoContainer.id = 'video-container';
+
+                $("#main-container").append(hideVideoContainer);
+                $("#main-container").append(videoContainer);
+                $("#hide-video-container").html('<a href="#" id="hide-video">закрыть</a>')
+
+                $("#video-container").html('<video id="my-video" width="560" controls="controls"><source src="http://seminar.mmc.nsu.ru/data/video/11_06/seminar_v640.webm" type="video/webm" /><source src="http://seminar.mmc.nsu.ru/data/video/11_06/seminar_v640.mp4" type="video/mp4" /></video>');
+            });
+
+            $("#video5").click(function(){
+                $("#hide-video-container").remove();
+                $("#video-container").remove();
+
+                $("#rank-name").remove();
+                $("#globe-container").remove();
+
+                var hideVideoContainer = document.createElement('div');
+                var videoContainer = document.createElement('div');
+
+                hideVideoContainer.id = 'hide-video-container';
+                videoContainer.id = 'video-container';
+
+                $("#main-container").append(hideVideoContainer);
+                $("#main-container").append(videoContainer);
+                $("#hide-video-container").html('<a href="#" id="hide-video">закрыть</a>')
+
+                $("#video-container").html('<video id="my-video" width="560" controls="controls"><source src="http://seminar.mmc.nsu.ru/data/video/21_04/21.04.14.webm" type="video/webm" /><source src="http://seminar.mmc.nsu.ru/data/video/21_04/21.04.14.mp4" type="video/mp4" /></video>');
+            });
 
             $("#video4").click(function(){
                 $("#hide-video-container").remove();

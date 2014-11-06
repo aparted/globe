@@ -129,7 +129,7 @@ body {
     font-size: 14px;        
     /*background: #00233A;*/
     /*background: #676767 url('/img/bcg.jpg') top left repeat-x;*/
-    background: #456386 url('/img/bcg_blue.jpg') top left repeat-x;
+    background: #456386 url('../img/bcg_blue.jpg') top left repeat-x;
     /*background: #FFF;*/
     
     height: 100%;
@@ -230,7 +230,7 @@ header #title {
 #box_wrapper {
     position: relative;
     left: 0;
-    width: 5000px;
+    width: 8000px;
     height: 100%;
 }
 
@@ -350,6 +350,11 @@ h3.announcement-theme{
 
     height: 600px;
     width: 600px;
+}
+
+#globe-container-min{
+    height: 350px;
+    width: 350px;
 }
 
 #rank-name{
@@ -522,8 +527,9 @@ height: 40px;
 }
 
 #recommendedBrowsers{
+    width: 560px;
     text-align: left;
-    margin-top: 18px;
+    margin-top: 0px;
 }
 
 .note{
@@ -617,4 +623,18 @@ height: 40px;
     h3 {
         page-break-after: avoid;
     }
+}
+
+#blockDelete{
+    float: right;
+    margin-top: 100px;
+}
+.slide{
+    margin-top: 15px;
+    margin-bottom: 50px;
+    width: 560px;
+}
+
+.slidePrev{
+    width: 200px;
 }
