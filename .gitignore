@@ -1,10 +1,2 @@
-# video
-*.m4v
-*.mp4
-*.webm
-
-*.ppt
-*.pdf
-
-
-data/
+data/video
+data/slides

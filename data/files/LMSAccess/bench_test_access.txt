@@ -1,0 +1,3 @@
+site: demo.bench.nsu.ru
+login: demo
+password: demo

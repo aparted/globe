@@ -1,0 +1,3 @@
+site: novosibirsk.instructure.com
+login: roman@softaria.com
+password: switchoffsecondskin
